@@ -12,6 +12,9 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     header {
@@ -22,6 +25,8 @@
 
     main {
       padding: 20px;
+      max-width: 800px;
+      width: 100%;
     }
 
     h1 {
@@ -53,6 +58,9 @@
       padding: 20px;
       margin-bottom: 20px;
       background-color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .project h2 {
@@ -66,12 +74,31 @@
 
     .project img {
       max-width: 100%;
+      height: 200px;
+      object-fit: cover;
       border: 1px solid #666;
-      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .project-link {
+      display: inline-block;
+      padding: 8px 20px;
+      background-color: #66b3ff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      text-decoration: none;
     }
 
     .contacts {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       margin-top: 20px;
     }
@@ -82,13 +109,25 @@
       margin: 0 10px;
       fill: #66b3ff;
     }
+
+    @media screen and (max-width: 600px) {
+      /* Mobile styles */
+      .project img {
+        height: 150px;
+      }
+
+      .contacts {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 </head>
 
 <body>
   <header>
     <h1>Hello! I'm Alex.</h1>
-    <h1>Welcome to my portfolio webpage!</h1>
+    <h2>Welcome to my portfolio webpage!</h2>
     <p>#Python web developer</p>
     <div class="contacts">
       <a href="https://github.com/sh4dowpunk" target="_blank"><img class="contact-icon" src="https://img.icons8.com/fluency/48/000000/github.png" alt="GitHub"></a>
@@ -122,40 +161,40 @@
       </p>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
+    <section id="portfolio">
+      <h2>My Projects</h2>
       <div class="project">
         <h2>Snake Game</h2>
+        <img src="https://github.com/sh4dowpunk/Snake-Game/blob/main/game_preview.gif?raw=true" alt="Snake Game Preview">
         <p>
           This is a classic Snake game implemented in Python using the Pygame library.
         </p>
-        <img src="https://github.com/sh4dowpunk/Snake-Game/blob/main/game_preview.gif?raw=true" alt="Snake Game Preview">
-        <p>
-          Demo: <a href="https://github.com/sh4dowpunk/Snake-Game" target="_blank">GitHub Repo</a>
-        </p>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/sh4dowpunk/Snake-Game" target="_blank">View on GitHub</a>
+        </div>
       </div>
 
       <div class="project">
         <h2>Register and Login App</h2>
-        <p>
-          This is a simple Register and Login app built using Python and Tkinter. The app allows users to register with a username and password and login with their credentials. User information is securely stored in an SQLite3 database, ensuring data integrity and confidentiality. If a username is already taken during registration, the app will display an error message. The app also provides a main dashboard where users can view registered users and delete them if needed.
-        </p>
         <img src="https://github.com/sh4dowpunk/Register-and-login-app/raw/main/screenshot1.bmp" alt="Register and Login App Screenshot 1">
         <img src="https://github.com/sh4dowpunk/Register-and-login-app/raw/main/screenshot2.bmp" alt="Register and Login App Screenshot 2">
         <p>
-          Demo: <a href="https://github.com/sh4dowpunk/Register-and-login-app" target="_blank">GitHub Repo</a>
+          This is a simple Register and Login app built using Python and Tkinter. The app allows users to register with a username and password and login with their credentials. User information is securely stored in an SQLite3 database, ensuring data integrity and confidentiality. If a username is already taken during registration, the app will display an error message. The app also provides a main dashboard where users can view registered users and delete them if needed.
         </p>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/sh4dowpunk/Register-and-login-app" target="_blank">View on GitHub</a>
+        </div>
       </div>
 
       <div class="project">
         <h2>Virtual Keyboard</h2>
+        <img src="https://raw.githubusercontent.com/sh4dowpunk/Virtual-Keyboard/main/preview.bmp" alt="Virtual Keyboard Preview">
         <p>
           Welcome to the Virtual Keyboard project! It is a fully functional virtual keyboard implemented using JavaScript, HTML, and CSS. This versatile keyboard can be easily integrated into any web application, providing users with a seamless typing experience.
         </p>
-        <img src="https://raw.githubusercontent.com/sh4dowpunk/Virtual-Keyboard/main/preview.bmp" alt="Virtual Keyboard Preview">
-        <p>
-          Demo: <a href="https://github.com/sh4dowpunk/Virtual-Keyboard" target="_blank">GitHub Repo</a>
-        </p>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/sh4dowpunk/Virtual-Keyboard" target="_blank">View on GitHub</a>
+        </div>
       </div>
 
       <!-- Add more project sections as needed -->
