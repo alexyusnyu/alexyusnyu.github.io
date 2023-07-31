@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name - Portfolio</title>
+  <title>Alex - Portfolio</title>
   <style>
     body {
       background-color: #1a1a1a;
@@ -26,6 +26,13 @@
 
     h1 {
       color: #f2f2f2;
+      margin: 0;
+    }
+
+    h2 {
+      color: #66b3ff;
+      margin-top: 5px;
+      margin-bottom: 20px;
     }
 
     p {
@@ -56,47 +63,98 @@
     .project p {
       color: #b3b3b3;
     }
+
+    .project img {
+      max-width: 100%;
+      border: 1px solid #666;
+      margin-top: 10px;
+    }
+
+    .contacts {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .contact-icon {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+      fill: #66b3ff;
+    }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Hello! My name is Alex.</h1>
-    <h2>This is my portfolio webpage.</h2>
-    <p>Python Developer</p>
-    <p>
-      <a href="https://github.com/sh4dowpunk" target="_blank">GitHub</a> |
-      <a href="https://linkedin.com/in/shadowpunk" target="_blank">LinkedIn</a>
-    </p>
+    <h1>Hello! I'm Alex.</h1>
+    <h1>Welcome to my portfolio webpage!</h1>
+    <p>#Python web developer</p>
+    <div class="contacts">
+      <a href="https://github.com/sh4dowpunk" target="_blank"><img class="contact-icon" src="https://img.icons8.com/fluency/48/000000/github.png" alt="GitHub"></a>
+      <a href="https://linkedin.com/in/shadowpunk" target="_blank"><img class="contact-icon" src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://instagram.com/sh4dowpunk" target="_blank"><img class="contact-icon" src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram"></a>
+      <img class="contact-icon" src="https://img.icons8.com/color/48/000000/phone.png" alt="Phone">
+      <span>+359 89 2300 292</span>
+      <br>
+      <img class="contact-icon" src="https://img.icons8.com/color/48/000000/email.png" alt="Email">
+      <span>slayer1649@gmail.com</span>
+    </div>
   </header>
 
   <main>
     <section id="bio">
-      <h2>Bio</h2>
+      <h2>About Me</h2>
       <p>
-        123
+        Hi there! I'm Alex, a passionate and dedicated software developer with a strong background in Python, Java, and JavaScript. I love creating efficient and elegant solutions to real-world problems using technology as my canvas.
+      </p>
+      <p>
+        My journey began with Python, where I learned to harness the power of this versatile language to build applications, games, and more. As I explored the world of web development, I delved into Java and JavaScript, mastering the art of crafting interactive and dynamic web experiences.
+      </p>
+      <p>
+        I am skilled in building responsive and user-friendly front-end interfaces with HTML5/CSS and have hands-on experience in developing full-stack web applications using Django for back-end and SQL for database management.
+      </p>
+      <p>
+        My passion for coding and continuous learning drives me to stay updated with the latest trends and technologies, enabling me to deliver high-quality and cutting-edge solutions to my projects. Whether it's creating a classic Snake game, crafting a modern login app, or designing a virtual keyboard, I put my heart and soul into every project I work on.
+      </p>
+      <p>
+        Feel free to explore my portfolio and check out my GitHub and LinkedIn profiles to learn more about my work. Let's connect and collaborate on exciting projects to make a positive impact in the tech world!
       </p>
     </section>
 
     <section id="projects">
-      <h2>My projects</h2>
+      <h2>Projects</h2>
       <div class="project">
-        <h2>Project Title 1</h2>
+        <h2>Snake Game</h2>
         <p>
-
+          This is a classic Snake game implemented in Python using the Pygame library.
         </p>
+        <img src="https://github.com/sh4dowpunk/Snake-Game/blob/main/game_preview.gif?raw=true" alt="Snake Game Preview">
         <p>
-          Demo: <a href="#" target="_blank">Link</a>
+          Demo: <a href="https://github.com/sh4dowpunk/Snake-Game" target="_blank">GitHub Repo</a>
         </p>
       </div>
 
       <div class="project">
-        <h2>Project Title 2</h2>
+        <h2>Register and Login App</h2>
         <p>
-
+          This is a simple Register and Login app built using Python and Tkinter. The app allows users to register with a username and password and login with their credentials. User information is securely stored in an SQLite3 database, ensuring data integrity and confidentiality. If a username is already taken during registration, the app will display an error message. The app also provides a main dashboard where users can view registered users and delete them if needed.
         </p>
+        <img src="https://github.com/sh4dowpunk/Register-and-login-app/raw/main/screenshot1.bmp" alt="Register and Login App Screenshot 1">
+        <img src="https://github.com/sh4dowpunk/Register-and-login-app/raw/main/screenshot2.bmp" alt="Register and Login App Screenshot 2">
         <p>
-          Demo: <a href="#" target="_blank">Link</a>
+          Demo: <a href="https://github.com/sh4dowpunk/Register-and-login-app" target="_blank">GitHub Repo</a>
+        </p>
+      </div>
+
+      <div class="project">
+        <h2>Virtual Keyboard</h2>
+        <p>
+          Welcome to the Virtual Keyboard project! It is a fully functional virtual keyboard implemented using JavaScript, HTML, and CSS. This versatile keyboard can be easily integrated into any web application, providing users with a seamless typing experience.
+        </p>
+        <img src="https://raw.githubusercontent.com/sh4dowpunk/Virtual-Keyboard/main/preview.bmp" alt="Virtual Keyboard Preview">
+        <p>
+          Demo: <a href="https://github.com/sh4dowpunk/Virtual-Keyboard" target="_blank">GitHub Repo</a>
         </p>
       </div>
 
