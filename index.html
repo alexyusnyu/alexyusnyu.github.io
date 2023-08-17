@@ -1,183 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alex - Portfolio</title>
-  <style>
-    body {
-      background-color: #1a1a1a;
-      color: #f2f2f2;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    header {
-      background-color: #111;
-      padding: 20px;
-      text-align: center;
-    }
-
-    main {
-      padding: 20px;
-      max-width: 800px;
-      width: 100%;
-    }
-
-    h1 {
-      color: #f2f2f2;
-      margin: 0;
-      font-size: 30px;
-    }
-
-    h2 {
-      color: #66b3ff;
-      margin-top: 5px;
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
-
-    p {
-      margin-bottom: 20px;
-      font-size: 16px;
-    }
-
-    a {
-      color: #66b3ff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .project {
-      border: 1px solid #666;
-      padding: 20px;
-      margin-bottom: 20px;
-      background-color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .project h2 {
-      color: #f2f2f2;
-      margin-top: 0;
-    }
-
-    .project p {
-      color: #b3b3b3;
-    }
-
-    .project img {
-      max-width: 100%;
-      height: auto;
-      object-fit: cover;
-      border: 1px solid #666;
-      margin-bottom: 10px;
-    }
-
-    .project-links {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .project-link {
-      display: inline-block;
-      padding: 8px 20px;
-      background-color: #66b3ff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      text-decoration: none;
-    }
-
-    .contacts {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 20px;
-      font-size: 16px;
-    }
-
-    .contact-icon {
-      width: 30px;
-      height: 30px;
-      margin: 0 10px;
-      fill: #66b3ff;
-    }
-
-    @media screen and (max-width: 600px) {
-      /* Mobile styles */
-      h1 {
-        font-size: 24px;
-      }
-
-      h2 {
-        font-size: 20px;
-      }
-
-      p {
-        font-size: 14px;
-      }
-
-      .project-links {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-    /* Style for links */
-  #certificates a {
-    color: #007bff; /* Blue color for links */
-    text-decoration: none;
-    transition: color 0.3s; /* Smooth color transition on hover */
-  }
-
-  #certificates a:hover {
-    color: #0056b3; /* Darker blue color on hover */
-    text-decoration: underline; /* Underline on hover */
-  }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <header>
-    <h1>Hello! I'm Alex.</h1>
-    <h2>Welcome to my portfolio webpage!</h2>
-    <p>#Python web developer</p>
-    <div class="contacts">
-      <a href="https://github.com/sh4dowpunk" target="_blank"><img class="contact-icon" src="https://img.icons8.com/fluency/48/000000/github.png" alt="GitHub"></a>
-      <a href="https://linkedin.com/in/shadowpunk" target="_blank"><img class="contact-icon" src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn"></a>
-      <a href="https://instagram.com/sh4dowpunk" target="_blank"><img class="contact-icon" src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram"></a>
-      <img class="contact-icon" src="https://img.icons8.com/color/48/000000/phone.png" alt="Phone">
-      <span>+359 89 2300 292</span>
-      <br>
-      <img class="contact-icon" src="https://img.icons8.com/color/48/000000/email.png" alt="Email">
-      <span>slayer1649@gmail.com</span>
-    </div>
+  <header class="header">
+    <h1 class="header-title">Hello! I'm Alex.
+                                     </h1>
+      <h1 class="header-title">Welcome to my portfolio webpage!</h1>
+    <h2 class="header-subtitle"># Junior Developer</h2>
+    <nav class="header-nav">
+      <a href="#about">About Me</a>
+      <a href="#projects">My Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contacts</a>
+    </nav>
   </header>
 
-  <main>
-    <section id="bio">
-      <h2>About Me</h2>
+  <section id="about" class="section">
+    <div class="content">
+      <h2 class="section-title">About Me</h2>
       <p>
-        Hi there! I'm Alex. I enjoy street fitness and tuning cars. I've been learning programming for two years, starting with Java and then Python. I'm skilled in Java, Python, JavaScript, HTML, CSS, and SQL. I've also worked as a locksmith, car chip tuner, and warehouse manager. My life is a mix of staying fit, coding, and automotive adventures.
-      </p>
+        Hi there! I'm Alex. I enjoy street fitness and tuning cars. I've been learning programming for two years, starting with Java and then Python. I'm skilled in Java, Python, JavaScript, HTML, CSS, SQL, Ruby and React. I've also worked as a locksmith, car chip tuner, and warehouse manager. My life is a mix of staying fit, coding, and automotive adventures. </p>
       <p>
-        Feel free to explore my portfolio and check out my GitHub and LinkedIn profiles to learn more about my work. Let's connect and collaborate on exciting projects to make a positive impact in the tech world!
-      </p>
-    </section>
-
-    <section id="portfolio">
-      <h2>My Projects</h2>
+        Feel free to explore my portfolio and check out my GitHub and LinkedIn profiles to learn more about my work. Let's connect and collaborate on exciting projects to make a positive impact in the tech world!  </p>
+    </div>
+  </section>
+<section id="projects" class="section">
+  <div class="content">
+    <h2 class="section-title">My Projects</h2>
+    <div class="projects">
       <div class="project">
         <h2>Snake Game</h2>
         <img src="https://github.com/sh4dowpunk/Snake-Game/blob/main/game_preview.gif?raw=true" alt="Snake Game Preview">
@@ -211,32 +66,32 @@
           <a class="project-link" href="https://github.com/sh4dowpunk/Virtual-Keyboard" target="_blank">View on GitHub</a>
         </div>
       </div>
-         <!-- Task Manager App -->
+
       <div class="project">
         <h2>Task Manager App</h2>
         <img src="https://github.com/sh4dowpunk/Task-Manager-App/raw/main/screenshot.png" alt="Task Manager App Screenshot">
         <p>
-         A minimalist Task Manager application built with Ruby on Rails and React, allowing you to effortlessly manage your tasks.
+          A minimalist Task Manager application built with Ruby on Rails and React, allowing you to effortlessly manage your tasks.
         </p>
         <div class="project-links">
           <a class="project-link" href="https://github.com/sh4dowpunk/Task-Manager-App" target="_blank">View on GitHub</a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
-    </section>
-  </main>
 
-
-<main>
-    <section id="certificates">
-        <h2>My Certificates</h2>
-
+  <section id="certificates" class="section">
+    <div class="content">
+      <h2 class="section-title">Certificates</h2>
+      <div class="certificates">
         <div class="certificate">
-            <h3><a href="https://softuni.bg/certificates/details/143781/9b78c1dd" target="_blank">Programming Basics</a></h3>
-            <img src="programming_basics_certificate.jpeg" alt="Programming Basics Certificate">
+          <h3><a href="https://softuni.bg/certificates/details/143781/9b78c1dd" target="_blank">Programming Basics</a></h3>
+          <img src="programming_basics_certificate.jpeg" alt="Programming Basics Certificate">
         </div>
 
-        <div class="certificate">
+          <div class="certificate">
             <h3><a href="https://softuni.bg/certificates/details/167626/829f2f8e" target="_blank">Programming Fundamentals with Java</a></h3>
             <img src="java_fundamentals_certificate.jpeg" alt="Programming Fundamentals with Java Certificate">
         </div>
@@ -255,9 +110,27 @@
             <h3><a href="https://softuni.bg/certificates/details/180885/91b5d8af" target="_blank">Python OOP</a></h3>
             <img src="python_oop_cetificate.jpeg" alt="Python OOP Certificate">
         </div>
-    </section>
-</main>
+
+        <!-- Repeat the above certificate structure for other certificates -->
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="content">
+      <h2 class="section-title">Contact Me</h2>
+      <p>Ready to start a project together? Feel free to reach out!</p>
+      <div class="contact-icons">
+        <a href="https://github.com/sh4dowpunk" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/github.png" alt="GitHub"></a>
+        <a href="https://linkedin.com/in/shadowpunk" target="_blank"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn"></a>
+        <a href="tel:+359892300292"><img src="https://img.icons8.com/color/48/000000/phone.png" alt="Phone"></a>
+        <a href="mailto:slayer1649@gmail.com"><img src="https://img.icons8.com/color/48/000000/email.png" alt="Email"></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2023 Alex. All rights reserved.</p>
+  </footer>
 </body>
-
-
 </html>
