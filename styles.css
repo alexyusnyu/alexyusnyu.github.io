@@ -56,15 +56,26 @@ body {
 /* Project and Certificate 3D effect */
 .project,
 .certificate {
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.4s, box-shadow 0.4s;
   transform-style: preserve-3d;
-  perspective: 500px;
+  perspective: 1000px;
 }
 
 .project:hover,
 .certificate:hover {
-  transform: translateY(-5px) translateZ(10px);
-  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+  transform: translate3d(0, -5px, 20px);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+.project h2,
+.certificate h3 {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.3s;
+}
+
+.project:hover h2,
+.certificate:hover h3 {
+  transform: translate3d(0, -2px, 10px);
 }
 
 /* Reset default margin and padding */
