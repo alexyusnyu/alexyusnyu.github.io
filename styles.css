@@ -11,7 +11,7 @@ body {
   line-height: 1.6;
   background-color: #111;
   color: #ddd;
-  transition: background-color 0.5s; /* Smooth background color transition */
+  padding-top: 50px; /* Adjust padding for the fixed menu */
 }
 
 /* Header styles */
@@ -26,24 +26,12 @@ body {
   font-size: 36px;
   margin-bottom: 5px;
   color: #ff6464;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for header title */
-  transition: text-shadow 0.3s;
-}
-
-.header-title:hover {
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7); /* Increase text shadow on hover */
 }
 
 .header-subtitle {
   font-size: 18px;
   font-weight: 400;
   opacity: 0.8;
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.header-subtitle:hover {
-  transform: scale(1.1); /* Increase size on hover */
-  opacity: 1; /* Increase opacity on hover */
 }
 
 .header-nav {
@@ -55,19 +43,10 @@ body {
   text-decoration: none;
   margin: 0 15px;
   transition: color 0.3s;
-  border: 2px solid #ff6464; /* Add a border to make them look like buttons */
-  border-radius: 5px; /* Add rounded corners */
-  padding: 10px 20px; /* Add padding for better button appearance */
-  display: inline-block; /* Ensure they are inline-block elements */
-  text-transform: uppercase; /* Convert text to uppercase */
-  letter-spacing: 1px; /* Add letter spacing */
-  font-weight: bold; /* Bold text */
 }
 
 .header-nav a:hover {
   color: #ff6464;
-  background-color: #000; /* Change background color on hover */
-  transform: scale(1.05); /* Add a slight zoom effect on hover */
 }
 
 /* Section styles */
@@ -81,12 +60,6 @@ body {
   font-size: 28px;
   margin-bottom: 20px;
   color: #ff6464;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow for section title */
-  transition: text-shadow 0.3s;
-}
-
-.section-title:hover {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Increase text shadow on hover */
 }
 
 /* Content styles */
@@ -99,24 +72,43 @@ body {
 /* Project and Certificate 3D effect */
 .project,
 .certificate {
-  width: calc(50% - 20px); /* Set a fixed width for each project/certificate to make them equal */
-  height: auto; /* Remove fixed height to adapt to content */
-  margin: 10px;
-  padding: 20px;
-  background-color: #000;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
   transition: transform 0.4s, box-shadow 0.4s;
   transform-style: preserve-3d;
   perspective: 1000px;
-  display: inline-block; /* Ensure they are inline-block elements */
-  vertical-align: top; /* Align projects/certificates to the top */
-  box-sizing: border-box; /* Ensure box-sizing is consistent */
 }
 
 .project:hover,
 .certificate:hover {
-  transform: translate3d(0, -8px, 20px); /* Slightly increase lift on hover */
-  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.3); /* Increase box shadow on hover */
+  transform: translate3d(0, -5px, 20px);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+.project h2,
+.certificate h3 {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.3s;
+}
+
+.project:hover h2,
+.certificate:hover h3 {
+  transform: translate3d(0, -2px, 10px);
+}
+
+/* Project and Certificate styles */
+.projects,
+.certificates {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project,
+.certificate {
+  width: calc(33.33% - 40px); /* 3 max per row with spacing */
+  margin: 20px;
+  padding: 20px;
+  background-color: #000;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
 }
 
 .project h2,
@@ -132,13 +124,6 @@ body {
   height: auto;
   margin-bottom: 10px;
   border: 1px solid #555;
-  transition: transform 0.3s, border-color 0.3s;
-}
-
-.project:hover img,
-.certificate:hover img {
-  transform: scale(1.05); /* Slightly zoom in on hover */
-  border-color: #ff6464; /* Change border color on hover */
 }
 
 .project p,
@@ -165,15 +150,12 @@ body {
   font-size: 14px;
   text-decoration: none;
   transition: background-color 0.3s, transform 0.2s;
-  text-transform: uppercase; /* Convert text to uppercase */
-  letter-spacing: 1px; /* Add letter spacing */
-  font-weight: bold; /* Bold text */
 }
 
 .project-link:hover,
 .certificate-link:hover {
-  background-color: #ff4444; /* Change background color on hover */
-  transform: translateY(-3px); /* Add a slight upward lift on hover */
+  background-color: #ff0000; /* Change color on hover */
+  transform: translateY(-3px); /* Add a slight hover effect */
 }
 
 /* Contact icons styles */
@@ -195,5 +177,50 @@ body {
 .contact-icons a:hover {
   transform: translateY(-1px) translateZ(2px);
   color: #ff6464;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow on hover */
+}
+
+/* Footer styles */
+.footer {
+  background-color: #000;
+  color: #ddd;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Add styles for the fixed menu */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  z-index: 1000; /* Ensure it's on top of other elements */
+  text-align: center;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.menu a:hover {
+  background-color: #ff6464;
+  transform: translateY(-3px);
 }
