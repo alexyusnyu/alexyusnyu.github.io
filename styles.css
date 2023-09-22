@@ -1,84 +1,4 @@
-/* Reset default margin and padding */
-body, h1, h2, h3, p, ul, li, a {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Apply a modern sans-serif font */
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background-color: #111;
-  color: #ddd;
-}
-
-/* Header styles */
-.header {
-  background-color: #000;
-  color: #ddd;
-  padding: 20px;
-  text-align: center;
-}
-
-.header-title {
-  font-size: 36px;
-  margin-bottom: 5px;
-  color: #ff6464;
-}
-
-.header-subtitle {
-  font-size: 18px;
-  font-weight: 400;
-  opacity: 0.8;
-}
-
-/* Section styles */
-.section {
-  padding: 60px 0;
-  text-align: center;
-  background-color: #111;
-}
-
-.section-title {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #ff6464;
-}
-
-/* Content styles */
-.content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Project and Certificate 3D effect */
-.project,
-.certificate {
-  transition: transform 0.4s, box-shadow 0.4s;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-}
-
-.project:hover,
-.certificate:hover {
-  transform: translate3d(0, -5px, 20px);
-  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
-}
-
-.project h2,
-.certificate h3 {
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.3s;
-}
-
-.project:hover h2,
-.certificate:hover h3 {
-  transform: translate3d(0, -2px, 10px);
-}
-
-/* Reset default margin and padding */
+/* Reset default margin, padding, and box-sizing */
 body, h1, h2, h3, p, ul, li, a {
   margin: 0;
   padding: 0;
@@ -138,7 +58,7 @@ body {
 .section-title {
   font-size: 28px;
   margin-bottom: 20px;
-  color: #ff6464; /* Updated color */
+  color: #ff6464;
 }
 
 /* Content styles */
@@ -148,14 +68,39 @@ body {
   padding: 0 20px;
 }
 
-/* Project styles */
-.projects {
+/* Project and Certificate 3D effect */
+.project,
+.certificate {
+  transition: transform 0.4s, box-shadow 0.4s;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.project:hover,
+.certificate:hover {
+  transform: translate3d(0, -5px, 20px);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+.project h2,
+.certificate h3 {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.3s;
+}
+
+.project:hover h2,
+.certificate:hover h3 {
+  transform: translate3d(0, -2px, 10px);
+}
+
+/* Project and Certificate styles */
+.projects, .certificates {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.project {
+.project, .certificate {
   width: 300px;
   margin: 20px;
   padding: 20px;
@@ -163,13 +108,13 @@ body {
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
 }
 
-.project h2 {
+.project h2, .certificate h3 {
   font-size: 24px;
   margin-bottom: 10px;
   color: #ff6464;
 }
 
-.project img {
+.project img, .certificate img {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
@@ -198,34 +143,6 @@ body {
   text-decoration: none;
 }
 
-/* Certificates styles */
-.certificates {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.certificate {
-  width: 300px;
-  margin: 20px;
-  padding: 20px;
-  background-color: #000;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-}
-
-.certificate h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #ff6464;
-}
-
-.certificate img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  border: 1px solid #555;
-}
-
 /* Contact icons styles */
 .contact-icons {
   margin-top: 20px;
@@ -237,24 +154,6 @@ body {
 .contact-icons a {
   display: inline-block;
   margin: 0 15px;
-  transition: transform 0.2s, color 0.3s;
-}
-
-.contact-icons a:hover {
-  transform: translateY(-3px);
-  color: #ff6464;
-}
-
-/* Footer styles */
-.footer {
-  background-color: #000;
-  color: #ddd;
-  text-align: center;
-  padding: 10px 0;
-}
-
-/* Apply slight 3D effect to contact icons */
-.contact-icons a {
   transition: transform 0.2s, color 0.3s;
   transform-style: preserve-3d;
   perspective: 200px;
