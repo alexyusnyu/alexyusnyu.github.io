@@ -11,6 +11,9 @@ body {
   line-height: 1.6;
   background-color: #111;
   color: #ddd;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 /* Header styles */
@@ -19,6 +22,7 @@ body {
   color: #ddd;
   padding: 20px;
   text-align: center;
+  margin-top: 30px; /* Separation from the top of the page */
 }
 
 .header-title {
@@ -33,19 +37,45 @@ body {
   opacity: 0.8;
 }
 
-.header-nav {
-  margin-top: 20px;
+/* Menu styles */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  z-index: 1000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0; /* Increase menu height and padding */
+  font-size: 18px; /* Increase menu font size */
 }
 
-.header-nav a {
-  color: #ddd;
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu a {
   text-decoration: none;
-  margin: 0 15px;
-  transition: color 0.3s;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-.header-nav a:hover {
-  color: #ff6464;
+.menu a:hover {
+  background-color: #ff6464;
+  transform: translateY(-3px);
 }
 
 /* Section styles */
@@ -74,6 +104,7 @@ body {
   transition: transform 0.4s, box-shadow 0.4s;
   transform-style: preserve-3d;
   perspective: 1000px;
+  margin-bottom: 20px; /* Increase separation by height */
 }
 
 .project:hover,
@@ -94,28 +125,35 @@ body {
 }
 
 /* Project and Certificate styles */
-.projects, .certificates {
+.projects-certificates {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  margin: 0 -10px; /* Add negative margin to offset the margin on individual items */
+  padding: 20px; /* Add padding to move content away from the edges */
+  background-color: #111; /* Match background color to body */
 }
 
-.project, .certificate {
-  width: 300px;
-  margin: 20px;
+.project,
+.certificate {
+  flex: 0 0 calc(30% - 20px); /* Adjusted width for better spacing */
+  margin: 10px; /* Add space between items */
   padding: 20px;
   background-color: #000;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  text-align: center; /* Center content within each project/certificate */
+  position: relative; /* Add relative positioning for inner elements */
 }
 
 .project h2, .certificate h3 {
-  font-size: 24px;
+  font-size: 20px; /* Slightly smaller font size */
   margin-bottom: 10px;
   color: #ff6464;
 }
 
 .project img, .certificate img {
-  max-width: 100%;
+  width: 50%; /* Make images half smaller */
+  max-width: 100%; /* Ensure images don't exceed their container */
   height: auto;
   margin-bottom: 10px;
   border: 1px solid #555;
@@ -147,15 +185,17 @@ body {
 .certificates {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .certificate {
-  width: 300px;
-  margin: 20px;
+  flex: 0 0 calc(45% - 20px); /* Adjusted width for better spacing */
+  margin: 10px; /* Add space between items */
   padding: 20px;
   background-color: #000;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  text-align: center; /* Center content within each project/certificate */
+  position: relative; /* Add relative positioning for inner elements */
 }
 
 .certificate h3 {
@@ -165,7 +205,8 @@ body {
 }
 
 .certificate img {
-  max-width: 100%;
+  width: 50%; /* Make images half smaller */
+  max-width: 100%; /* Ensure images don't exceed their container */
   height: auto;
   margin-bottom: 10px;
   border: 1px solid #555;
@@ -200,79 +241,23 @@ body {
   padding: 10px 0;
 }
 
-/* Center the menu and its elements */
-.menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #000;
-  z-index: 1000;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap; /* Allow menu items to wrap */
-}
-
-.menu li {
-  margin-right: 20px;
-  margin-bottom: 10px; /* Add margin between menu items */
-}
-
-.menu a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 14px;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.menu a:hover {
-  background-color: #ff6464;
-  transform: translateY(-3px);
-}
-
-/* Visual effects for contact icons */
-.contact-icons {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-icons a {
-  display: inline-block;
-  margin: 0 15px;
-  transition: transform 0.2s, color 0.3s;
-  transform-style: preserve-3d;
-  perspective: 200px;
-}
-
-.contact-icons a:hover {
-  transform: translateY(-1px) translateZ(2px);
-  color: #ff6464;
-}
-
-/* Adjust project and certificate size for small screens */
-.project,
-.certificate {
-  width: calc(50% - 40px); /* 2 max per row with spacing on small screens */
-}
-
 /* Add media query for adjusting menu size based on screen width */
 @media (max-width: 768px) {
   .menu {
-    height: 50px; /* Adjust menu height for small screens */
+    height: 60px; /* Increase menu height for small screens */
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li {
+    margin: 0;
+    margin-bottom: 10px; /* Add margin between menu items */
+  }
+
+  .menu a {
+    font-size: 14px; /* Reduce menu font size for small screens */
   }
 }
