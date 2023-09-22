@@ -187,25 +187,28 @@ body {
   padding: 10px 0;
 }
 
-/* Add styles for the fixed menu */
+/* Center the menu and its elements */
 .menu {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: #000;
-  z-index: 1000; /* Ensure it's on top of other elements */
+  z-index: 1000;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
 .menu li {
-  display: inline;
   margin-right: 20px;
 }
 
@@ -223,4 +226,117 @@ body {
 .menu a:hover {
   background-color: #ff6464;
   transform: translateY(-3px);
+}
+
+/* Visual effects for contact icons */
+.contact-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icons a {
+  display: inline-block;
+  margin: 0 15px;
+  transition: transform 0.2s, color 0.3s;
+  transform-style: preserve-3d;
+  perspective: 200px;
+}
+
+.contact-icons a:hover {
+  transform: translateY(-1px) translateZ(2px);
+  color: #ff6464;
+}
+
+/* Add media query for adjusting project and certificate size on mobile */
+@media (max-width: 768px) {
+  .project,
+  .certificate {
+    width: calc(50% - 40px); /* 2 max per row with spacing on mobile */
+  }
+}
+
+/* Add media query for adjusting menu size on mobile */
+@media (max-width: 768px) {
+  .menu {
+    height: 40px; /* Adjust menu height for mobile */
+  }
+}
+
+/* Center the menu and its elements */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  z-index: 1000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.menu a:hover {
+  background-color: #ff6464;
+  transform: translateY(-3px);
+}
+
+/* Visual effects for contact icons */
+.contact-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icons a {
+  display: inline-block;
+  margin: 0 15px;
+  transition: transform 0.2s, color 0.3s;
+  transform-style: preserve-3d;
+  perspective: 200px;
+}
+
+.contact-icons a:hover {
+  transform: translateY(-1px) translateZ(2px);
+  color: #ff6464;
+}
+
+/* Add media query for adjusting project and certificate size on mobile */
+@media (max-width: 768px) {
+  .project,
+  .certificate {
+    width: calc(50% - 40px); /* 2 max per row with spacing on mobile */
+  }
+}
+
+/* Add media query for adjusting menu size on mobile */
+@media (max-width: 768px) {
+  .menu {
+    height: 40px; /* Adjust menu height for mobile */
+  }
 }
