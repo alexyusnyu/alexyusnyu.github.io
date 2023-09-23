@@ -1,22 +1,48 @@
-/* Reset default margin, padding, and box-sizing */
 body, h1, h2, h3, p, ul, li, a {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Apply a modern sans-serif font */
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background-color: #111;
+  background-color: transparent;
   color: #ddd;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 
-/* Header styles */
+.parallax-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Adjust this property for scrolling effect */
+  transform-style: preserve-3d;
+  perspective: 10px;
+  transform: translate3d(0, 0, -2px);
+  animation: parallax 25s linear infinite;
+}
+
+@keyframes parallax {
+  0% {
+    transform: translate3d(0, 0, -2px);
+  }
+  50% {
+    transform: translate3d(0, 0, 2px);
+  }
+  100% {
+    transform: translate3d(0, 0, -2px);
+  }
+}
+
 .header {
   background-color: #000;
   color: #ff6464;
@@ -27,18 +53,17 @@ body {
 }
 
 .header-title {
-  font-size: 28px;
+  font-size: 36px;
   margin-bottom: 5px;
   color: #fff;
 }
 
 .header-subtitle {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   opacity: 0.8;
 }
 
-/* Menu styles */
 .menu {
   position: fixed;
   top: 0;
@@ -50,10 +75,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
-  font-size: 16px;
+  padding: 15px 0;
+  font-size: 18px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  display: none;
 }
 
 .menu ul {
@@ -61,20 +85,17 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap; /* Allow menu items to wrap on small screens */
-  justify-content: center;
 }
 
 .menu li {
   margin-right: 20px;
-  margin-bottom: 10px;
 }
 
 .menu a {
   text-decoration: none;
   color: #ddd;
   font-weight: bold;
-  padding: 8px 16px;
+  padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.2s;
 }
@@ -85,58 +106,26 @@ body {
   color: #fff;
 }
 
-/* Mobile menu styles */
-@media (max-width: 768px) {
-  .menu {
-    display: block;
-  }
-
-  .menu ul {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .menu li {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .menu a {
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
-  }
-
-  .menu a:hover {
-    background-color: #ff6464;
-    transform: translateY(-3px);
-    color: #fff;
-  }
-}
-
-/* Section styles */
 .section {
+  position: relative;
+  z-index: 1;
   padding: 40px 0;
   text-align: center;
-  background-color: #111;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Adjust this property for scrolling effect */
 }
 
-.section-title {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #ff6464;
-}
-
-/* Content styles */
 .content {
   max-width: 100%;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Projects container styles */
-.projects {
-  max-width: 100%;
+.projects,
+.certificates {
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -144,13 +133,12 @@ body {
   gap: 20px;
 }
 
-/* Project and Certificate 3D effect */
 .project,
 .certificate {
   transition: transform 0.4s, box-shadow 0.4s;
   transform-style: preserve-3d;
   perspective: 1000px;
-  flex: 0 0 calc(33.33% - 20px); /* Three projects per line on big screens */
+  flex: 0 0 calc(32% - 20px);
   margin-bottom: 20px;
   background-color: #222;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
@@ -179,7 +167,7 @@ body {
   width: 100%;
   max-width: 100%;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   border: 1px solid #555;
   border-radius: 5px;
   transition: transform 0.3s, border-color 0.3s;
@@ -207,7 +195,7 @@ body {
 .project-link,
 .certificate-link {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 8px 20px;
   background-color: #ff6464;
   color: #fff;
   border: none;
@@ -223,18 +211,8 @@ body {
   transform: translateY(-3px);
 }
 
-/* Certificates styles */
-.certificates {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 .certificate {
-  transition: transform 0.4s, box-shadow 0.4s;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-  flex: 0 0 calc(33.33% - 20px); /* Three certificates per line on big screens */
+  flex: 0 0 calc(32% - 20px);
   margin: 10px;
   padding: 20px;
   background-color: #222;
@@ -245,14 +223,8 @@ body {
   border: 1px solid #333;
 }
 
-.certificate:hover {
-  transform: translate3d(0, -5px, 20px);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  background-color: #333;
-}
-
 .certificate h3 {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 10px;
   color: #fff;
 }
@@ -261,7 +233,7 @@ body {
   width: 100%;
   max-width: 100%;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   border: 1px solid #555;
   border-radius: 5px;
   transition: transform 0.3s, border-color 0.3s;
@@ -272,7 +244,6 @@ body {
   border-color: #ff6464;
 }
 
-/* Contact icons styles */
 .contact-icons {
   margin-top: 20px;
   display: flex;
@@ -282,7 +253,7 @@ body {
 
 .contact-icons a {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 15px;
   transition: transform 0.2s, color 0.3s;
   transform-style: preserve-3d;
   perspective: 200px;
@@ -294,65 +265,18 @@ body {
   color: #ff6464;
 }
 
-/* Footer styles */
 .footer {
   background-color: #000;
   color: #ddd;
   text-align: center;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
-/* Center the menu and its elements */
-.menu {
-  background-color: #000;
-  z-index: 1000;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  font-size: 16px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap; /* Allow menu items to wrap on small screens */
-  justify-content: center;
-}
-
-.menu li {
-  margin-right: 20px;
-  margin-bottom: 10px;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #ddd;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.menu a:hover {
-  background-color: #ff6464;
-  transform: translateY(-3px);
-  color: #fff;
-}
-
-/* Mobile menu styles */
 @media (max-width: 768px) {
-  /* Display the menu on mobile screens */
   .menu {
-    display: block;
+    font-size: 16px;
+    background-color: #111;
+    padding: 15px 0;
   }
 
   .menu ul {
@@ -375,5 +299,29 @@ body {
     background-color: #ff6464;
     transform: translateY(-3px);
     color: #fff;
+  }
+
+  .menu-close-button {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #ff6464;
+    font-size: 24px;
+  }
+
+  .menu-opened .menu-close-button {
+    display: block;
+  }
+
+  .menu-opened ul {
+    display: block;
+    background-color: #111;
+    padding: 15px 0;
+  }
+
+  .menu-opened li {
+    margin: 0;
   }
 }
