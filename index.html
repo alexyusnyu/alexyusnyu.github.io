@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alex - Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Initially hide the menu */
+    .menu {
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <nav class="menu">
@@ -152,5 +158,18 @@
   <footer class="footer">
     <p>&copy; 2023 Alex. All rights reserved.</p>
   </footer>
+ <script>
+    // JavaScript to show the menu when scrolling below the header
+    window.addEventListener('scroll', function () {
+      var header = document.querySelector('.header');
+      var menu = document.querySelector('.menu');
+
+      if (window.pageYOffset > header.offsetHeight) {
+        menu.style.display = 'block';
+      } else {
+        menu.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
