@@ -357,3 +357,17 @@ body {
     margin: 0;
   }
 }
+
+/* Mobile view */
+@media (max-width: 768px) {
+  /* Remove the flex-wrap and justify-content rules from .projects and .certificates */
+  .projects, .certificates {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  /* Adjust the width for each project or certificate to 100% on mobile */
+  .project, .certificate {
+    flex: 0 0 100%;
+  }
+}
