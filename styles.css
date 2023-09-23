@@ -27,13 +27,13 @@ body {
 }
 
 .header-title {
-  font-size: 36px;
+  font-size: 28px;
   margin-bottom: 5px;
   color: #fff;
 }
 
 .header-subtitle {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   opacity: 0.8;
 }
@@ -50,9 +50,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
-  font-size: 18px;
+  padding: 10px 0;
+  font-size: 16px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
 }
 
 .menu ul {
@@ -60,17 +61,20 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap; /* Allow menu items to wrap on small screens */
+  justify-content: center;
 }
 
 .menu li {
   margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 .menu a {
   text-decoration: none;
   color: #ddd;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.2s;
 }
@@ -81,29 +85,58 @@ body {
   color: #fff;
 }
 
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  .menu {
+    display: block;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .menu a {
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .menu a:hover {
+    background-color: #ff6464;
+    transform: translateY(-3px);
+    color: #fff;
+  }
+}
+
 /* Section styles */
 .section {
-  padding: 60px 0;
+  padding: 40px 0;
   text-align: center;
   background-color: #111;
 }
 
 .section-title {
-  font-size: 28px;
+  font-size: 24px;
   margin-bottom: 20px;
   color: #ff6464;
 }
 
 /* Content styles */
 .content {
-  max-width: 1100px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
 }
 
 /* Projects container styles */
 .projects {
-  max-width: 1100px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -117,7 +150,7 @@ body {
   transition: transform 0.4s, box-shadow 0.4s;
   transform-style: preserve-3d;
   perspective: 1000px;
-  flex: 0 0 calc(32% - 20px); /* Adjust the width for each project or certificate */
+  flex: 0 0 calc(33.33% - 20px); /* Three projects per line on big screens */
   margin-bottom: 20px;
   background-color: #222;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
@@ -143,7 +176,7 @@ body {
 
 .project img,
 .certificate img {
-  width: 100%; /* Adjust image width to fill the project or certificate */
+  width: 100%;
   max-width: 100%;
   height: auto;
   margin-bottom: 15px;
@@ -174,7 +207,7 @@ body {
 .project-link,
 .certificate-link {
   display: inline-block;
-  padding: 8px 20px;
+  padding: 8px 16px;
   background-color: #ff6464;
   color: #fff;
   border: none;
@@ -198,7 +231,10 @@ body {
 }
 
 .certificate {
-  flex: 0 0 calc(32% - 20px); /* Adjust the width for each project or certificate */
+  transition: transform 0.4s, box-shadow 0.4s;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  flex: 0 0 calc(33.33% - 20px); /* Three certificates per line on big screens */
   margin: 10px;
   padding: 20px;
   background-color: #222;
@@ -209,14 +245,20 @@ body {
   border: 1px solid #333;
 }
 
+.certificate:hover {
+  transform: translate3d(0, -5px, 20px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  background-color: #333;
+}
+
 .certificate h3 {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 10px;
   color: #fff;
 }
 
 .certificate img {
-  width: 100%; /* Adjust image width to fill the project or certificate */
+  width: 100%;
   max-width: 100%;
   height: auto;
   margin-bottom: 15px;
@@ -240,7 +282,7 @@ body {
 
 .contact-icons a {
   display: inline-block;
-  margin: 0 15px;
+  margin: 0 10px;
   transition: transform 0.2s, color 0.3s;
   transform-style: preserve-3d;
   perspective: 200px;
@@ -257,7 +299,7 @@ body {
   background-color: #000;
   color: #ddd;
   text-align: center;
-  padding: 15px 0;
+  padding: 10px 0;
 }
 
 /* Center the menu and its elements */
@@ -268,8 +310,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
-  font-size: 18px;
+  padding: 10px 0;
+  font-size: 16px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
@@ -282,17 +324,20 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap; /* Allow menu items to wrap on small screens */
+  justify-content: center;
 }
 
 .menu li {
   margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 .menu a {
   text-decoration: none;
   color: #ddd;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.2s;
 }
@@ -305,10 +350,9 @@ body {
 
 /* Mobile menu styles */
 @media (max-width: 768px) {
+  /* Display the menu on mobile screens */
   .menu {
-    font-size: 16px;
-    background-color: #111;
-    padding: 15px 0;
+    display: block;
   }
 
   .menu ul {
@@ -331,43 +375,5 @@ body {
     background-color: #ff6464;
     transform: translateY(-3px);
     color: #fff;
-  }
-
-  .menu-close-button {
-    display: none;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    color: #ff6464;
-    font-size: 24px;
-  }
-
-  .menu-opened .menu-close-button {
-    display: block;
-  }
-
-  .menu-opened ul {
-    display: block;
-    background-color: #111;
-    padding: 15px 0;
-  }
-
-  .menu-opened li {
-    margin: 0;
-  }
-}
-
-/* Mobile view */
-@media (max-width: 768px) {
-  /* Remove the flex-wrap and justify-content rules from .projects and .certificates */
-  .projects, .certificates {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-  }
-
-  /* Adjust the width for each project or certificate to 100% on mobile */
-  .project, .certificate {
-    flex: 0 0 100%;
   }
 }
