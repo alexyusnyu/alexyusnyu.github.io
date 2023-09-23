@@ -212,6 +212,12 @@ body {
 }
 
 @media (max-width: 768px) {
+  .project,
+  .certificate {
+    flex: 0 0 calc(100% - 20px);
+  }
+}
+
   .menu li {
     margin-right: 10px; /* Reduce margin on small screens */
   }
