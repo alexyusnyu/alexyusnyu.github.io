@@ -19,16 +19,17 @@ body {
 /* Header styles */
 .header {
   background-color: #000;
-  color: #ddd;
+  color: #ff6464; /* Red text for a professional look */
   padding: 20px;
   text-align: center;
-  margin-top: 30px; /* Separation from the top of the page */
+  margin-top: 30px;
+  border-bottom: 2px solid #ff6464;
 }
 
 .header-title {
   font-size: 36px;
   margin-bottom: 5px;
-  color: #ff6464;
+  color: #fff;
 }
 
 .header-subtitle {
@@ -47,10 +48,11 @@ body {
   z-index: 1000;
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px 0; /* Increase menu height and padding */
-  font-size: 18px; /* Increase menu font size */
+  padding: 15px 0;
+  font-size: 18px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for separation */
 }
 
 .menu ul {
@@ -66,7 +68,7 @@ body {
 
 .menu a {
   text-decoration: none;
-  color: #fff;
+  color: #ddd;
   font-weight: bold;
   padding: 10px 20px;
   border-radius: 5px;
@@ -76,6 +78,7 @@ body {
 .menu a:hover {
   background-color: #ff6464;
   transform: translateY(-3px);
+  color: #fff; /* White text on hover for better visibility */
 }
 
 /* Section styles */
@@ -104,80 +107,59 @@ body {
   transition: transform 0.4s, box-shadow 0.4s;
   transform-style: preserve-3d;
   perspective: 1000px;
-  margin-bottom: 20px; /* Increase separation by height */
+  margin-bottom: 20px;
+  background-color: #222; /* Darker background for a professional look */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
+  text-align: center;
+  position: relative;
+  border-radius: 10px; /* Larger border radius */
+  border: 1px solid #333; /* Dark border for separation */
 }
 
 .project:hover,
 .certificate:hover {
   transform: translate3d(0, -5px, 20px);
-  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Larger shadow on hover */
 }
 
 .project h2,
 .certificate h3 {
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.3s;
-}
-
-.project:hover h2,
-.certificate:hover h3 {
-  transform: translate3d(0, -2px, 10px);
-}
-
-/* Project and Certificate styles */
-.projects-certificates {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 -10px; /* Add negative margin to offset the margin on individual items */
-  padding: 20px; /* Add padding to move content away from the edges */
-  background-color: #111; /* Match background color to body */
-}
-
-.project,
-.certificate {
-  flex: 0 0 calc(30% - 20px); /* Adjusted width for better spacing */
-  margin: 10px; /* Add space between items */
-  padding: 20px;
-  background-color: #000;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-  text-align: center; /* Center content within each project/certificate */
-  position: relative; /* Add relative positioning for inner elements */
-}
-
-.project h2, .certificate h3 {
-  font-size: 20px; /* Slightly smaller font size */
+  font-size: 20px;
   margin-bottom: 10px;
-  color: #ff6464;
+  color: #fff; /* White text for better visibility */
 }
 
-.project img, .certificate img {
-  width: 50%; /* Make images half smaller */
-  max-width: 100%; /* Ensure images don't exceed their container */
+.project img,
+.certificate img {
+  width: 60%; /* Slightly larger image size */
+  max-width: 100%;
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 15px; /* More spacing between image and text */
   border: 1px solid #555;
 }
 
-.project p {
-  font-size: 14px;
-  color: #999;
+.project p,
+.certificate p {
+  font-size: 16px;
+  color: #aaa; /* Lighter text color for a subtle effect */
   margin-bottom: 10px;
 }
 
-.project-links {
+.project-links,
+.certificate-links {
   display: flex;
   justify-content: center;
 }
 
-.project-link {
+.project-link,
+.certificate-link {
   display: inline-block;
   padding: 8px 20px;
   background-color: #ff6464;
   color: #fff;
   border: none;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -185,52 +167,33 @@ body {
 .certificates {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .certificate {
-  flex: 0 0 calc(45% - 20px); /* Adjusted width for better spacing */
-  margin: 10px; /* Add space between items */
+  flex: 0 0 calc(45% - 20px);
+  margin: 10px;
   padding: 20px;
-  background-color: #000;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-  text-align: center; /* Center content within each project/certificate */
-  position: relative; /* Add relative positioning for inner elements */
+  background-color: #222;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid #333;
 }
 
 .certificate h3 {
   font-size: 18px;
   margin-bottom: 10px;
-  color: #ff6464;
+  color: #fff;
 }
 
 .certificate img {
-  width: 50%; /* Make images half smaller */
-  max-width: 100%; /* Ensure images don't exceed their container */
+  width: 60%;
+  max-width: 100%;
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border: 1px solid #555;
-}
-
-/* Contact icons styles */
-.contact-icons {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-icons a {
-  display: inline-block;
-  margin: 0 15px;
-  transition: transform 0.2s, color 0.3s;
-  transform-style: preserve-3d;
-  perspective: 200px;
-}
-
-.contact-icons a:hover {
-  transform: translateY(-1px) translateZ(2px);
-  color: #ff6464;
 }
 
 /* Footer styles */
@@ -238,13 +201,58 @@ body {
   background-color: #000;
   color: #ddd;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
-/* Add media query for adjusting menu size based on screen width */
+/* Center the menu and its elements */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  z-index: 1000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu li {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ddd;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.menu a:hover {
+  background-color: #ff6464;
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+/* Adjust project and certificate size for small screens */
 @media (max-width: 768px) {
   .menu {
-    height: 60px; /* Increase menu height for small screens */
+    height: 60px;
+    padding: 10px 0;
   }
 
   .menu ul {
@@ -254,10 +262,16 @@ body {
 
   .menu li {
     margin: 0;
-    margin-bottom: 10px; /* Add margin between menu items */
+    margin-bottom: 10px;
   }
 
   .menu a {
-    font-size: 14px; /* Reduce menu font size for small screens */
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .project,
+  .certificate {
+    flex: 0 0 calc(50% - 20px);
   }
 }
