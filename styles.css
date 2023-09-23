@@ -19,7 +19,7 @@ body {
 /* Header styles */
 .header {
   background-color: #000;
-  color: #ff6464; /* Red text for a professional look */
+  color: #ff6464;
   padding: 20px;
   text-align: center;
   margin-top: 30px;
@@ -52,7 +52,7 @@ body {
   align-items: center;
   padding: 15px 0;
   font-size: 18px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for separation */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .menu ul {
@@ -78,7 +78,7 @@ body {
 .menu a:hover {
   background-color: #ff6464;
   transform: translateY(-3px);
-  color: #fff; /* White text on hover for better visibility */
+  color: #fff;
 }
 
 /* Section styles */
@@ -96,9 +96,19 @@ body {
 
 /* Content styles */
 .content {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px;
+}
+
+/* Projects container styles */
+.projects {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 /* Project and Certificate 3D effect */
@@ -107,41 +117,51 @@ body {
   transition: transform 0.4s, box-shadow 0.4s;
   transform-style: preserve-3d;
   perspective: 1000px;
+  flex: 0 0 calc(32% - 20px); /* Adjust the width for each project or certificate */
   margin-bottom: 20px;
-  background-color: #222; /* Darker background for a professional look */
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
+  background-color: #222;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
   position: relative;
-  border-radius: 10px; /* Larger border radius */
-  border: 1px solid #333; /* Dark border for separation */
+  border-radius: 5px;
+  border: 1px solid #333;
 }
 
 .project:hover,
 .certificate:hover {
   transform: translate3d(0, -5px, 20px);
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Larger shadow on hover */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  background-color: #333;
 }
 
 .project h2,
 .certificate h3 {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #fff; /* White text for better visibility */
+  color: #fff;
 }
 
 .project img,
 .certificate img {
-  width: 60%; /* Slightly larger image size */
+  width: 100%; /* Adjust image width to fill the project or certificate */
   max-width: 100%;
   height: auto;
-  margin-bottom: 15px; /* More spacing between image and text */
+  margin-bottom: 15px;
   border: 1px solid #555;
+  border-radius: 5px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.project:hover img,
+.certificate:hover img {
+  transform: scale(1.05);
+  border-color: #ff6464;
 }
 
 .project p,
 .certificate p {
   font-size: 16px;
-  color: #aaa; /* Lighter text color for a subtle effect */
+  color: #aaa;
   margin-bottom: 10px;
 }
 
@@ -161,24 +181,31 @@ body {
   border-radius: 5px;
   font-size: 16px;
   text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.project-link:hover,
+.certificate-link:hover {
+  background-color: #ff4242;
+  transform: translateY(-3px);
 }
 
 /* Certificates styles */
 .certificates {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .certificate {
-  flex: 0 0 calc(45% - 20px);
+  flex: 0 0 calc(32% - 20px); /* Adjust the width for each project or certificate */
   margin: 10px;
   padding: 20px;
   background-color: #222;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
   position: relative;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid #333;
 }
 
@@ -189,11 +216,40 @@ body {
 }
 
 .certificate img {
-  width: 60%;
+  width: 100%; /* Adjust image width to fill the project or certificate */
   max-width: 100%;
   height: auto;
   margin-bottom: 15px;
   border: 1px solid #555;
+  border-radius: 5px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.certificate:hover img {
+  transform: scale(1.05);
+  border-color: #ff6464;
+}
+
+/* Contact icons styles */
+.contact-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icons a {
+  display: inline-block;
+  margin: 0 15px;
+  transition: transform 0.2s, color 0.3s;
+  transform-style: preserve-3d;
+  perspective: 200px;
+  color: #ddd;
+}
+
+.contact-icons a:hover {
+  transform: translateY(-1px) translateZ(2px);
+  color: #ff6464;
 }
 
 /* Footer styles */
@@ -201,21 +257,24 @@ body {
   background-color: #000;
   color: #ddd;
   text-align: center;
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
 /* Center the menu and its elements */
 .menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   background-color: #000;
   z-index: 1000;
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 15px 0;
+  font-size: 18px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .menu ul {
@@ -223,20 +282,16 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
 }
 
 .menu li {
   margin-right: 20px;
-  margin-bottom: 10px;
 }
 
 .menu a {
   text-decoration: none;
   color: #ddd;
   font-weight: bold;
-  font-size: 16px;
-  text-transform: uppercase;
   padding: 10px 20px;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.2s;
@@ -248,30 +303,57 @@ body {
   color: #fff;
 }
 
-/* Adjust project and certificate size for small screens */
+/* Mobile menu styles */
 @media (max-width: 768px) {
   .menu {
-    height: 60px;
-    padding: 10px 0;
+    font-size: 16px;
+    background-color: #111;
+    padding: 15px 0;
   }
 
   .menu ul {
+    display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   .menu li {
-    margin: 0;
+    margin-right: 0;
     margin-bottom: 10px;
   }
 
   .menu a {
-    font-size: 14px;
-    padding: 8px 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
   }
 
-  .project,
-  .certificate {
-    flex: 0 0 calc(50% - 20px);
+  .menu a:hover {
+    background-color: #ff6464;
+    transform: translateY(-3px);
+    color: #fff;
+  }
+
+  .menu-close-button {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #ff6464;
+    font-size: 24px;
+  }
+
+  .menu-opened .menu-close-button {
+    display: block;
+  }
+
+  .menu-opened ul {
+    display: block;
+    background-color: #111;
+    padding: 15px 0;
+  }
+
+  .menu-opened li {
+    margin: 0;
   }
 }
