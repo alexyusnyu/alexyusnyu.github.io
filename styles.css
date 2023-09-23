@@ -1,9 +1,11 @@
+/* Reset default margin, padding, and box-sizing */
 body, h1, h2, h3, p, ul, li, a {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Apply a modern sans-serif font */
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
@@ -12,35 +14,10 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-}
-
-.parallax-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
   background-image: url('background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Adjust this property for scrolling effect */
-  transform-style: preserve-3d;
-  perspective: 10px;
-  transform: translate3d(0, 0, -2px);
-  animation: parallax 25s linear infinite;
-}
-
-@keyframes parallax {
-  0% {
-    transform: translate3d(0, 0, -2px);
-  }
-  50% {
-    transform: translate3d(0, 0, 2px);
-  }
-  100% {
-    transform: translate3d(0, 0, -2px);
-  }
+  background-attachment: fixed;
 }
 
 .header {
@@ -111,10 +88,7 @@ body {
   z-index: 1;
   padding: 40px 0;
   text-align: center;
-  background-image: url('background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Adjust this property for scrolling effect */
+  background-image: none;
 }
 
 .content {
@@ -124,7 +98,7 @@ body {
 }
 
 .projects,
-.certificates {
+.certificates{
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
@@ -136,8 +110,6 @@ body {
 .project,
 .certificate {
   transition: transform 0.4s, box-shadow 0.4s;
-  transform-style: preserve-3d;
-  perspective: 1000px;
   flex: 0 0 calc(32% - 20px);
   margin-bottom: 20px;
   background-color: #222;
@@ -146,17 +118,18 @@ body {
   position: relative;
   border-radius: 5px;
   border: 1px solid #333;
+
 }
 
 .project:hover,
 .certificate:hover {
-  transform: translate3d(0, -5px, 20px);
+  transform: translateY(-5px);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   background-color: #333;
 }
 
 .project h2,
-.certificate h3 {
+.certificate h2 {
   font-size: 20px;
   margin-bottom: 10px;
   color: #fff;
@@ -211,39 +184,6 @@ body {
   transform: translateY(-3px);
 }
 
-.certificate {
-  flex: 0 0 calc(32% - 20px);
-  margin: 10px;
-  padding: 20px;
-  background-color: #222;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  position: relative;
-  border-radius: 5px;
-  border: 1px solid #333;
-}
-
-.certificate h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.certificate img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  border: 1px solid #555;
-  border-radius: 5px;
-  transition: transform 0.3s, border-color 0.3s;
-}
-
-.certificate:hover img {
-  transform: scale(1.05);
-  border-color: #ff6464;
-}
-
 .contact-icons {
   margin-top: 20px;
   display: flex;
@@ -255,13 +195,11 @@ body {
   display: inline-block;
   margin: 0 15px;
   transition: transform 0.2s, color 0.3s;
-  transform-style: preserve-3d;
-  perspective: 200px;
   color: #ddd;
 }
 
 .contact-icons a:hover {
-  transform: translateY(-1px) translateZ(2px);
+  transform: translateY(-1px);
   color: #ff6464;
 }
 
@@ -273,55 +211,8 @@ body {
 }
 
 @media (max-width: 768px) {
-  .menu {
-    font-size: 16px;
-    background-color: #111;
-    padding: 15px 0;
-  }
-
-  .menu ul {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .menu li {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .menu a {
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
-  }
-
-  .menu a:hover {
-    background-color: #ff6464;
-    transform: translateY(-3px);
-    color: #fff;
-  }
-
-  .menu-close-button {
-    display: none;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    color: #ff6464;
-    font-size: 24px;
-  }
-
-  .menu-opened .menu-close-button {
-    display: block;
-  }
-
-  .menu-opened ul {
-    display: block;
-    background-color: #111;
-    padding: 15px 0;
-  }
-
-  .menu-opened li {
-    margin: 0;
+  .project,
+  .certificate {
+    flex: 0 0 calc(100% - 20px);
   }
 }
