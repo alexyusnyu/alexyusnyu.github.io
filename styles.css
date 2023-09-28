@@ -225,3 +225,20 @@ body {
     padding: 10px 15px; /* Reduce padding on small screens */
   }
 }
+
+#about, #contact, #projects, #certificates {
+  color: white; /* Set text color to white */
+}
+
+#about p, #contact p, #projects p, #certificates p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-shadow: -4px -4px 8px black, 4px -4px 8px black, -4px 4px 8px black, 4px 4px 8px black;
+}
+
+#about .section-title, #contact .section-title, #projects .section-title, #certificates .section-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-shadow: -4px -4px 8px black, 4px -4px 8px black, -4px 4px 8px black, 4px 4px 8px black; 
+}
