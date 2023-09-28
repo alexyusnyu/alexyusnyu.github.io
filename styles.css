@@ -1,3 +1,4 @@
+/* Reset some default styles for elements */
 body, h1, h2, h3, p, ul, li, a {
   margin: 0;
   padding: 0;
@@ -194,21 +195,58 @@ body {
   text-shadow: -4px -4px 8px black, 4px -4px 8px black, -4px 4px 8px black, 4px 4px 8px black;
 }
 
-.project-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff6464; /* Background color for buttons */
-  color: #fff; /* Text color for buttons */
+/* Styles for the mobile menu and button (hidden on non-mobile screens) */
+#menu-button {
+  display: none; /* Initially hide the menu button */
+  background-color: #000;
+  color: #ff6464;
   border: none;
+  padding: 10px 15px;
   border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s, transform 0.2s;
   cursor: pointer;
 }
 
-.project-link:hover {
-  background-color: #fff; /* Background color on hover */
-  color: #ff6464; /* Text color on hover */
-  transform: translateY(-3px);
+.mobile-menu {
+  display: none; /* Initially hide the mobile menu */
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  top: 60px; /* Adjust the top position as needed */
+  right: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1001;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu ul li {
+  margin-bottom: 10px;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.menu-icon::before {
+  content: '\2630'; /* Unicode for the hamburger icon */
+  font-size: 28px;
+}
+
+/* Use media query to show the menu button on screens up to a certain width */
+@media (max-width: 768px) {
+  #menu-button {
+    display: block; /* Show the menu button on mobile screens */
+  }
+
+  /* Show the mobile menu when the menu button is clicked */
+  #menu-button.active + .mobile-menu {
+    display: block;
+  }
 }

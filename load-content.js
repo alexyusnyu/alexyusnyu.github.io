@@ -27,4 +27,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Load footer
   loadContent('footer.html', 'footer-placeholder');
+
+  // Toggle the mobile menu when the menu button is clicked
+  const menuButton = document.getElementById("menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuButton.addEventListener("click", function () {
+    mobileMenu.style.display = mobileMenu.style.display === "block" ? "none" : "block";
+  });
 });
