@@ -193,3 +193,22 @@ body {
   margin-bottom: 10px;
   text-shadow: -4px -4px 8px black, 4px -4px 8px black, -4px 4px 8px black, 4px 4px 8px black;
 }
+
+.project-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6464; /* Background color for buttons */
+  color: #fff; /* Text color for buttons */
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.project-link:hover {
+  background-color: #fff; /* Background color on hover */
+  color: #ff6464; /* Text color on hover */
+  transform: translateY(-3px);
+}
