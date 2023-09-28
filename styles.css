@@ -153,38 +153,6 @@ body {
   border-color: #ff6464;
 }
 
-.project p,
-.certificate p {
-  font-size: 16px;
-  color: #aaa;
-  margin-bottom: 10px;
-}
-
-.project-links,
-.certificate-links {
-  display: flex;
-  justify-content: center;
-}
-
-.project-link,
-.certificate-link {
-  display: inline-block;
-  padding: 8px 20px;
-  background-color: #ff6464;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  text-decoration: none;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.project-link:hover,
-.certificate-link:hover {
-  background-color: #ff4242;
-  transform: translateY(-3px);
-}
-
 .contact-icons {
   margin-top: 20px;
   display: flex;
@@ -211,23 +179,8 @@ body {
   padding: 15px 0;
 }
 
-@media (max-width: 768px) {
-  .project,
-  .certificate {
-    flex: 0 0 calc(100% - 20px); /* Maintain full width on mobile devices */
-  }
-
-  .menu li {
-    margin-right: 10px; /* Reduce margin on small screens */
-  }
-
-  .menu a {
-    padding: 10px 15px; /* Reduce padding on small screens */
-  }
-}
-
 #about, #contact, #projects, #certificates {
-  color: white; /* Set text color to white */
+  color: white;
 }
 
 #about p, #contact p, #projects p, #certificates p {
@@ -240,5 +193,5 @@ body {
 #about .section-title, #contact .section-title, #projects .section-title, #certificates .section-title {
   font-size: 24px;
   margin-bottom: 10px;
-  text-shadow: -4px -4px 8px black, 4px -4px 8px black, -4px 4px 8px black, 4px 4px 8px black; 
+  text-shadow: -4px -4px 8px black, 4px -4px 8px black, -4px 4px 8px black, 4px 4px 8px black;
 }
