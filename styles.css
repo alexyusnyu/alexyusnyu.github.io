@@ -5,17 +5,19 @@ body, h1, h2, h3, p, ul, li, a {
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
   line-height: 1.6;
-  background-color: transparent;
-  color: #ddd;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
   background-image: url('background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: top left 30%;
+  animation: scrollBackground 20s linear infinite;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: #ddd;
 }
 
 .header {
@@ -194,7 +196,6 @@ body {
   text-shadow: -4px -4px 8px black, 4px -4px 8px black, -4px 4px 8px black, 4px 4px 8px black;
 }
 
-/* Styles for the mobile menu and button (hidden on non-mobile screens) */
 #menu-button {
   display: none;
   background-color: #000;
@@ -251,4 +252,35 @@ body {
   #menu-button.active + .mobile-menu {
     display: block;
   }
+}
+
+@keyframes scrollBackground {
+  0%, 100% {
+    background-position: top left 30%;
+  }
+  50% {
+    background-position: bottom right 30%;
+  }
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6464;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.project-link:hover {
+  background-color: #ff4646;
+  transform: translateY(-3px);
 }
