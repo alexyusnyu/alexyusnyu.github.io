@@ -1,4 +1,3 @@
-/* Reset some default styles for elements */
 body, h1, h2, h3, p, ul, li, a {
   margin: 0;
   padding: 0;
@@ -104,8 +103,8 @@ body {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 20px;
+  justify-content: center;
 }
 
 .project,
@@ -197,7 +196,7 @@ body {
 
 /* Styles for the mobile menu and button (hidden on non-mobile screens) */
 #menu-button {
-  display: none; /* Initially hide the menu button */
+  display: none;
   background-color: #000;
   color: #ff6464;
   border: none;
@@ -207,11 +206,11 @@ body {
 }
 
 .mobile-menu {
-  display: none; /* Initially hide the mobile menu */
+  display: none;
   background-color: #000;
   color: #fff;
   position: absolute;
-  top: 60px; /* Adjust the top position as needed */
+  top: 60px;
   right: 0;
   width: 100%;
   text-align: center;
@@ -235,17 +234,20 @@ body {
 }
 
 .menu-icon::before {
-  content: '\2630'; /* Unicode for the hamburger icon */
+  content: '\2630';
   font-size: 28px;
 }
 
-/* Use media query to show the menu button on screens up to a certain width */
 @media (max-width: 768px) {
-  #menu-button {
-    display: block; /* Show the menu button on mobile screens */
+  .project,
+  .certificate {
+    flex: 0 0 calc(100% - 20px);
   }
 
-  /* Show the mobile menu when the menu button is clicked */
+  #menu-button {
+    display: block;
+  }
+
   #menu-button.active + .mobile-menu {
     display: block;
   }
