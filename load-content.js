@@ -9,9 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  // Load header and navigation
+  // Load header
   loadContent('header.html', 'header-placeholder');
-  loadContent('nav.html', 'nav-placeholder');
 
   // Load about section
   loadContent('about.html', 'about-container');
@@ -34,5 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   menuButton.addEventListener("click", function () {
     mobileMenu.style.display = mobileMenu.style.display === "block" ? "none" : "block";
+    menuButton.classList.toggle("active");
   });
 });
