@@ -117,17 +117,21 @@ body {
   justify-content: center;
 }
 
+
+
 .project, .certificate {
   transition: transform 0.4s, box-shadow 0.4s;
   flex: 0 0 calc(32% - 20px);
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   background-color: rgba(0, 0, 0, 0.7);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
   position: relative;
   border-radius: 5px;
   border: 1px solid #333;
+
 }
+
 
 .project:hover, .certificate:hover {
   transform: translateY(-5px);
