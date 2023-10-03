@@ -22,14 +22,23 @@ body {
 }
 
 
-
 .header {
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.7);
   color: #ff6464;
   padding: 20px;
   text-align: center;
   margin-top: 30px;
   border-bottom: 2px solid #ff6464;
+}
+
+.header h1,
+.header h2,
+.header h3,
+.header p {
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-shadow: -4px -4px 8px black, 4px -4px 8px black, -4px 4px 8px black, 4px 4px 8px black; /* Add text shadow */
 }
 
 .header-title {
@@ -119,13 +128,14 @@ body {
   transition: transform 0.4s, box-shadow 0.4s;
   flex: 0 0 calc(32% - 20px);
   margin-bottom: 20px;
-  background-color: #222;
+  background-color: rgba(0, 0, 0, 0.7);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
   position: relative;
   border-radius: 5px;
   border: 1px solid #333;
 }
+
 
 .project:hover,
 .certificate:hover {
@@ -178,7 +188,7 @@ body {
 }
 
 .footer {
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.7); /* Use rgba to set transparency */
   color: #ddd;
   text-align: center;
   padding: 15px 0;
