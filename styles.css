@@ -321,3 +321,20 @@ body {
     width: calc(33.33% - 20px); /* Adjust margin as needed */
   }
 }
+
+.project-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6464;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.project-link:hover {
+  background-color: #ff4646;
+  transform: translateY(-3px);
+}
