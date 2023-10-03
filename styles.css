@@ -17,10 +17,8 @@ body {
   padding: 0;
   color: #ddd;
   overflow-x: hidden;
-  /* Hide horizontal scrollbar */
   animation: moveBackground 60s linear infinite;
 }
-
 
 .header {
   background-color: rgba(0, 0, 0, 0.7);
@@ -31,14 +29,11 @@ body {
   border-bottom: 2px solid #ff6464;
 }
 
-.header h1,
-.header h2,
-.header h3,
-.header p {
+.header h1, .header h2, .header h3, .header p {
   font-family: inherit;
   font-weight: inherit;
   line-height: inherit;
-  text-shadow: -4px -4px 8px black, 4px -4px 8px black, -4px 4px 8px black, 4px 4px 8px black; /* Add text shadow */
+  text-shadow: -4px -4px 8px black, 4px -4px 8px black, -4px 4px 8px black, 4px 4px 8px black;
 }
 
 .header-title {
@@ -113,8 +108,7 @@ body {
   padding: 20px;
 }
 
-.projects,
-.certificates {
+.projects, .certificates {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
@@ -123,8 +117,7 @@ body {
   justify-content: center;
 }
 
-.project,
-.certificate {
+.project, .certificate {
   transition: transform 0.4s, box-shadow 0.4s;
   flex: 0 0 calc(32% - 20px);
   margin-bottom: 20px;
@@ -136,23 +129,19 @@ body {
   border: 1px solid #333;
 }
 
-
-.project:hover,
-.certificate:hover {
+.project:hover, .certificate:hover {
   transform: translateY(-5px);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   background-color: #333;
 }
 
-.project h2,
-.certificate h2 {
+.project h2, .certificate h2 {
   font-size: 20px;
   margin-bottom: 10px;
   color: #fff;
 }
 
-.project img,
-.certificate img {
+.project img, .certificate img {
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -162,8 +151,7 @@ body {
   transition: transform 0.3s, border-color 0.3s;
 }
 
-.project:hover img,
-.certificate:hover img {
+.project:hover img, .certificate:hover img {
   transform: scale(1.05);
   border-color: #ff6464;
 }
@@ -188,7 +176,7 @@ body {
 }
 
 .footer {
-  background-color: rgba(0, 0, 0, 0.7); /* Use rgba to set transparency */
+  background-color: rgba(0, 0, 0, 0.7);
   color: #ddd;
   text-align: center;
   padding: 15px 0;
@@ -215,42 +203,38 @@ body {
   position: fixed;
   top: 20px;
   left: 20px;
-  background-color: #ff6464;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
+  background-color: transparent;
+  color: #ff6464;
+  border: 2px solid transparent;
+  padding: 15px 20px;
+  border-radius: 10px;
   cursor: pointer;
   z-index: 1001;
+  font-size: 20px;
+  text-align: center;
 }
 
-.menu-icon::before {
-  content: '\2022 \2022 \2022';
-  font-size: 24px;
-  color: #000;
-}
-
-.mobile-menu {
-  display: none;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #fff;
-  position: fixed;
-  top: 60px;
-  left: 20px;
-  width: 200px;
-  text-align: left;
-  z-index: 1000;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+#menu-button:hover, #menu-button.clicked {
+  background-color: transparent;
+  color: rgba(255, 100, 100, 0.4);
+  border: 2px solid rgba(255, 100, 100, 0.4);
 }
 
 .mobile-menu ul {
   list-style: none;
   padding: 0;
-  display: flex; /* Use flexbox */
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: none;
+  position: fixed;
+  top: 90px;
+  left: 20px;
+  width: auto;
+  text-align: left;
+  z-index: 1000;
+  padding: 10px;
+  border: 2px solid transparent;
 }
 
 .mobile-menu ul li {
@@ -259,22 +243,33 @@ body {
 
 .mobile-menu a {
   text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 18px;
-  display: block;
-  padding: 10px 20px;
-  transition: background-color 0.3s, transform 0.2s;
-  background-color: #ff6464;
+  color: #ff6464;
   display: inline-block;
-  border-radius: 25px; /* Add rounded corners */
-  margin: 5px 0; /* Add spacing between buttons */
-  text-align: center; /* Center text horizontally */
+  transition: transform 0.2s, color 0.3s;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid transparent;
+  position: relative;
 }
 
-.mobile-menu a:hover {
-  background-color: #ff4646;
-  transform: translateY(-3px);
+.mobile-menu a.clicked {
+  background-color: transparent;
+  color: rgba(255, 100, 100, 0.4);
+  border: 2px solid rgba(255, 100, 100, 0.4);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-menu a::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  z-index: -1;
 }
 
 @keyframes moveBackground {
