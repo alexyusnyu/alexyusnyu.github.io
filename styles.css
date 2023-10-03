@@ -238,6 +238,9 @@ body {
 .mobile-menu ul {
   list-style: none;
   padding: 0;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
 }
 
 .mobile-menu ul li {
@@ -250,12 +253,17 @@ body {
   font-weight: bold;
   font-size: 18px;
   display: block;
-  padding: 10px 0;
+  padding: 10px 20px;
   transition: background-color 0.3s, transform 0.2s;
+  background-color: #ff6464;
+  display: inline-block;
+  border-radius: 25px; /* Add rounded corners */
+  margin: 5px 0; /* Add spacing between buttons */
+  text-align: center; /* Center text horizontally */
 }
 
 .mobile-menu a:hover {
-  background-color: #ff6464;
+  background-color: #ff4646;
   transform: translateY(-3px);
 }
 
