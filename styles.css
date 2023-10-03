@@ -12,13 +12,16 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: top left 30%;
-  animation: scrollBackground 20s linear infinite;
+  background-position: 0% 0%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   color: #ddd;
+  overflow-x: hidden;
+  /* Hide horizontal scrollbar */
+  animation: moveBackground 60s linear infinite;
 }
+
+
 
 .header {
   background-color: #000;
@@ -75,14 +78,14 @@ body {
   color: #ddd;
   font-weight: bold;
   padding: 10px 20px;
-  border-radius: 50px; /* Rounded button */
+  border-radius: 50%;
   transition: background-color 0.3s, transform 0.2s;
-  background-color: #ff6464; /* Button background color */
+  background-color: #ff6464;
   display: inline-block;
 }
 
 .menu a:hover {
-  background-color: #ff4646; /* Hover background color */
+  background-color: #ff4646;
   transform: translateY(-3px);
   color: #fff;
 }
@@ -206,13 +209,13 @@ body {
   color: #fff;
   border: none;
   padding: 10px;
-  border-radius: 50%; /* Rounded button */
+  border-radius: 50%;
   cursor: pointer;
   z-index: 1001;
 }
 
 .menu-icon::before {
-  content: '\2022 \2022 \2022'; /* Unicode for three dots */
+  content: '\2022 \2022 \2022';
   font-size: 24px;
   color: #000;
 }
@@ -254,4 +257,16 @@ body {
 .mobile-menu a:hover {
   background-color: #ff6464;
   transform: translateY(-3px);
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
