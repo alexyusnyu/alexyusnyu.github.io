@@ -22,4 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     mobileMenu.style.display = mobileMenu.style.display === "block" ? "none" : "block";
     menuButton.classList.toggle("active");
   });
+
+  // Add the code below for hiding the mobile menu initially
+  mobileMenu.style.display = "none";
 });
