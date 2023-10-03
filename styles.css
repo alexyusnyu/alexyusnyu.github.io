@@ -132,7 +132,7 @@ body {
 .project:hover, .certificate:hover {
   transform: translateY(-5px);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .project h2, .certificate h2 {
