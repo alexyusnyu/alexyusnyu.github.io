@@ -1,36 +1,528 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex - Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header id="header-placeholder"></header>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <button id="menu-button" class="menu-icon">&#9776;</button>
+        <!--==================== UNICONS ====================-->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        
+        <!--==================== SWIPER CSS ====================-->
+        <link rel="stylesheet" href="./packages/css/swiper-bundle.min.css">
+        
+        <!--==================== CSS ====================-->
+        <link rel="stylesheet" href="./packages/css/styles.css">
+
+        <title>Alex</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Alex Yusnyu</a>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link">
+                                <i class="uil uil-estate nav__icon"></i>Home
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class="uil uil-user nav__icon"></i>About
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i>Skills
+                            </a>
+                        </li>
+                   
+                        <li class="nav__item">
+                            <a href="#portfolio" class="nav__link">
+                                <i class="uil uil-scenery nav__icon"></i>Portfolio                                
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class="uil uil-message nav__icon"></i>Contact                               
+                            </a>
+                        </li>
+                    </ul>
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                </div>
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="uil uil-apps"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <div class="home__content grid">
+                        <div class="home__social">
+                            <a href="https://www.linkedin.com/in/shadowpunk/" target="_blank" class="home__social-icon">
+                                <i class="uil uil-linkedin-alt"></i>
+                            </a>
+                            
+                            <a href="https://github.com/sh4dowpunk" target="_blank" class="home__social-icon">
+                                <i class="uil uil-github-alt"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__img">
+                            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                    <image class="home__blob-img" x="" xlink:href="packages/images/image1.jpg"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div class="home__data">
+                            <h1 class="home__title">Hi, I'am Alex</h1>
+                            <h3 class="home__subtitle">Junior Develepoer</h3>
+                            <p class="home__description">Experienced in development with Python, Java and JavaScript.</p>
+                            <a href="#contact" class="button button--flex home__button">
+                                Contact Me<i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-button button--flex">
+                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                            <span class="home__scroll-name">Scroll Down</span>
+                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                <h2 class="section__title">About Me</h2>
+                <span class="section__subtitle">My Introduction</span>
+
+                <div class="about__container container grid">
+                    <img src="packages/images/image2.jpg" alt="" class="about__img">
+                    <div class="about__data">
+                        <p class="about__description">
+                            I'm Alex Yusnyu, a passionate junior developer with over 2 years of experience working on various projects. I have a strong foundation in Python, Java, and web development technologies. I'm always eager to learn new skills and take on challenging projects.
+                        </p>
+                        <div class="about__info">
+                            <div>
+                                <span class="about__info-title">02+</span>
+                                <span class="about__info-name">Years <br> experience</span>
+                            </div>
+                            <div>
+                                <span class="about__info-title">13+</span>
+                                <span class="about__info-name">Completed <br> certifications</span>
+                            </div>
+
+                        </div>
+
+                        <div class="about__buttons">
+                            <a download="" href="packages/pdf/" class="button button--flex">
+                                Download CV<i class="uil uil-download-alt button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!--==================== SKILLS ====================-->
+<section class="skills section" id="skills">
+    <h2 class="section__title">Skills</h2>
+    <span class="section__subtitle">My Tech Stack</span>
+
+    <div class="skills__container">
+
+        <div class="skills__item">
+            <img alt="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+            <h4>Python</h4>
+        </div>
+
+        <div class="skills__item">
+            <img alt="Django" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg">
+            <h4>Django</h4>
+        </div>
+
+        <div class="skills__item">
+            <img alt="Java" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
+            <h4>Java</h4>
+        </div>
+
+        <div class="skills__item">
+            <img alt="HTML" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+            <h4>HTML</h4>
+        </div>
+        
+        <div class="skills__item">
+            <img alt="CSS" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg">
+            <h4>CSS</h4>
+        </div>
+        
+        <div class="skills__item">
+            <img alt="Bootstrap" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg">
+            <h4>Bootstrap</h4>
+        </div>
+        
+        <div class="skills__item">
+            <img alt="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+            <h4>JavaScript</h4>
+        </div>
+        
+        <div class="skills__item">
+            <img alt="React" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg">
+            <h4>React</h4>
+        </div>
+        
+        <div class="skills__item">
+            <img alt="TypeScript" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg">
+            <h4>TypeScript</h4>
+        </div>
+        
+        <div class="skills__item">
+            <img alt="NodeJS" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg">
+            <h4>NodeJS</h4>
+        </div>
+        
+        <div class="skills__item">
+            <img alt="PostgreSQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">
+            <h4>PostgreSQL</h4>
+        </div>
+        
+
+        
+        <div class="skills__item">
+            <img alt="SQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg">
+            <h4>SQL</h4>
+        </div>
+        
+        <div class="skills__item">
+            <img alt="Docker" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
+            <h4>Docker</h4>
+        </div>
+        
+        <div class="skills__item">
+            <img alt="Cloud Computing" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg">
+            <h4>Cloud Computing</h4>
+        </div>
+        
+        <div class="skills__item">
+            <img alt="DevOps" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg">
+            <h4>DevOps</h4>
+        </div>
+        
+        <div class="skills__item">
+            <img alt="Linux" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg">
+            <h4>Linux</h4>
+        </div>
+        
+        <div class="skills__item">
+            <img alt="Shell Scripting" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg">
+            <h4>Shell Scripting</h4>
+        </div>
+        
+        <div class="skills__item">
+            <img alt="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg">
+            <h4>Git</h4>
+        </div>
+
+    </div>
+    
+</section>
 
 
-  <div id="mobile-menu" class="mobile-menu">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#contact">Contacts</a></li>
-    </ul>
-  </div>
 
-  <div id="about-container"></div>
 
-  <div id="projects-container"></div>
+              <!--==================== QUALIFICATION ====================-->
+        <section class="qualification__section">
+            <h2 class="section__title">Qualification</h2>
+            <span class="section__subtitle">My personal journey</span>
 
-  <div id="certificates-container"></div>
+            <div class="qualification__container container">
+                <div class="qualification__tabs">
+                    <div class="qualification__button button--flex qualification__active" data-target='#education'>
+                        <i class="uil uil-graduation-cap qualification__icon"></i>
+                        Education
+                    </div>
 
-  <div id="contact-container"></div>
+                    <div class="qualification__button button--flex" data-target="#work">
+                        <i class="uil uil-briefcase-alt qualification__icon"></i>
+                        Work
+                    </div>
+                </div>
 
-  <footer id="footer-placeholder"></footer>
+                <div class="qualification__sections">
+            <!--==================== QUALIFICATION CONTENT 1 ====================-->
+            <div class="qualification__content qualification__active" data-content id="education">
+             <!--==================== QUALIFICATION 1 ====================--> 
+             <div class="qualification__data">
+                 <div>
+                     <h3 class="qualification__title">Secondary education majoring in Ecology</h3>
+                     <span class="qualification__subtitle">Professional High School of Ecology and
+                        Biotechnology "Prof. Dr. Asen Zlatarov"</span>
+                     <div class="qualification__calendar">
+                        <i class="uil uil-calendar-alt"></i>
+                        2014 - 2019
+                     </div>
+                 </div>
 
-  <script src="load-content.js"></script>
+                 <div>
+                     <span class="qualification__rounder"></span>
+                     <span class="qualification__line"></span>
+                 </div>
+             </div>
+             
+             <!--==================== QUALIFICATION 2 ====================--> 
+             <div class="qualification__data">
+                <div></div>
+                <div>
+                   <span class="qualification__rounder"></span>
+                   <span class="qualification__line"></span>
+                </div>
+
+                <div>
+                    <h3 class="qualification__title">Full Stack Web Developer</h3>
+                    <span class="qualification__subtitle">Softuni</span>
+                    <div class="qualification__calendar">
+                       <i class="uil uil-calendar-alt"></i>
+                       2021 - 2024
+                    </div>
+                </div>
+            </div> 
+
+            
+
+            
+            </div>
+            
+            <!--==================== QUALIFICATION CONTENT 2 ====================-->
+            <div class="qualification__content" data-content id="work">
+                <!--==================== QUALIFICATION 1 ====================--> 
+                <div class="qualification__data">
+                    <div>
+                        <h3 class="qualification__title">Engaged in self-initiated projects</h3>
+                        <span class="qualification__subtitle">Worked on personal projects, showcasing a commitment to learning and innovation.</span>
+                        <div class="qualification__calendar">
+                           <i class="uil uil-calendar-alt"></i>
+                           2022 - 2024
+                        </div>
+                    </div>
+   
+                    <div>
+                        <span class="qualification__rounder"></span>
+                        <span class="qualification__line"></span>
+                    </div>
+                </div>
+                
+                
+   
+               
+          
+               </div> 
+             
+               </div>
+            </div>
+        </section>
+      
+        
+        
+          
+       
+  
+       
+        </div>
+        </section>
+        <!--==================== PORTFOLIO ====================-->
+        <section class="portfolio section" id="portfolio">
+
+            <h2 class="section__title">Projects</h2>
+            <span class="section__subtitle">Most recent works</span>
+
+            <div class="portfolio__container container swiper-container">
+                <div class="swiper-wrapper">
+        <!--==================== PORTFOLIO 1 ====================-->
+        
+            <div class="portfolio__content grid swiper-slide">
+                <img src="https://dentisthub.up.railway.app/static/images/website_photos/julien-orliac-gzobGDzh4ww-unsplash.jpg" alt="" class="portfolio__img">
+
+
+                <div class="portfolio_">
+                    <h3 class="portfolio__title">DentistHub</h3>
+                    <p class="portfolio__description">DentistHub is a Django-based app that lets clients easily book dental appointments and helps dentists manage their schedules efficiently.</p>
+                    <a href="https://dentisthub.up.railway.app/" class="button button--flex button--small portfolio__button">
+                        Demo
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
+                    <a href="https://github.com/sh4dowpunk/DentistHub" class="button button--flex button--small portfolio__button">
+                        Repository
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
+
+
+                    
+                </div>
+            </div>
+
+            <!--==================== PORTFOLIO 2 ====================-->
+        
+            <div class="portfolio__content grid swiper-slide">
+                <img src="https://github.com/sh4dowpunk/Virtual-Keyboard/raw/main/preview.bmp" alt="" class="portfolio__img" >
+
+                <div class="portfolio_">
+                    <h3 class="portfolio__title">Virtual Keyboard</h3>
+                    <p class="portfolio__description">A fully functional, web-integrable keyboard built with JavaScript, HTML, and CSS.</p>
+          
+                    <a href="https://github.com/sh4dowpunk/Virtual-Keyboard" class="button button--flex button--small portfolio__button">
+                        Repository
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
+
+
+                    
+                </div>
+            </div>
+
+            <!--==================== PORTFOLIO 3 ====================-->
+        
+            <div class="portfolio__content grid swiper-slide">
+                <img src="https://github.com/sh4dowpunk/Jumpventure-Platformer-Jumping-Game/raw/main/preview.gif" alt="" class="portfolio__img" style="max-height: 265px;">
+
+                <div class="portfolio_">
+                    <h3 class="portfolio__title">Jumpventure</h3>
+                    <p class="portfolio__description">Jumpventure is an exciting platformer game made with Python and Pygame that tests your jumping skills and reflexes!</p>
+          
+                    <a href="https://github.com/sh4dowpunk/Jumpventure-Platformer-Jumping-Game" class="button button--flex button--small portfolio__button">
+                        Repository
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
+
+
+                    
+                </div>
+            </div>
+
+            <!--==================== PORTFOLIO 4 ====================-->
+        
+            <div class="portfolio__content grid swiper-slide">
+                <img src="https://cdn.sanity.io/images/tlr8oxjg/production/a2cb450ec260ec2620123ad98761505fc5bc47ee-1456x816.png?w=3840&q=100&fit=clip&auto=format" alt="" class="portfolio__img">
+
+
+                <div class="portfolio_">
+                    <h3 class="portfolio__title">Other projects</h3>
+                    <p class="portfolio__description">To view additional projects, please visit my GitHub profile.</p>
+                    <a href="https://github.com/sh4dowpunk" class="button button--flex button--small portfolio__button">
+                        My Github
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </a>
+
+
+
+                    
+                </div>
+            </div>
+
+
+                </div>
+
+                
+            <!-- add arrows-->
+            <div class="swiper-button-next">
+                <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+            </div>
+
+            <div class="swiper-button-prev">
+                <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+            </div>
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            
+        
+        </div>
+
+        </section>
+
+
+
+       
+
+        <!--==================== CONTACT ME ====================-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact me</h2>
+            <span class="section__subtitle">Get in touch</span>
+
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-phone-alt contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Call me</h3>
+                            <span class="contatc__subtitle">(+359) 892300292</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-envelope contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">E-mail</h3>
+                            <span class="contatc__subtitle">slayer1649@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="contact__information">
+                        <i class="uil uil-map-marker contact__icon"></i>
+
+                        <div>
+                            <h3 class="contact__title">Location</h3>
+                            <span class="contatc__subtitle">Sofia, Bulgaria</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    
+
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+    
+
+    <!--==================== SWIPER JS ====================-->
+    <script src="./packages/js/swiper-bundle.min.js"></script>
+
+    <!--==================== MAIN JS ====================-->
+    <script src="./packages/js/main.js"></script>
 </body>
+
 </html>
