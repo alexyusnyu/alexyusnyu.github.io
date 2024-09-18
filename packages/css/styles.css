@@ -1110,3 +1110,11 @@ img {
     display: none; /* Hide h4 on mobile devices */
   }
 }
+
+
+.portfolio__img {
+  width: 100%; /* Make sure images cover the full width of their container */
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensure images cover the container while maintaining aspect ratio */
+  object-position: center; /* Center the image in case of clipping */
+}
