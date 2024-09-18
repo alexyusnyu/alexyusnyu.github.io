@@ -463,7 +463,7 @@ img {
 .skills__item {
   display: flex;
   align-items: center;
-  
+
   border-radius: 0.5rem; /* Rounded corners */
   padding: 0.5rem 1rem; /* Padding inside each item */
   margin: 0.5rem; /* Margin around each item */
@@ -1088,15 +1088,25 @@ img {
 
 
 
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+  .skills__item {
+    width: 48px; /* Set fixed width for mobile */
+    height: 48px; /* Set fixed height for mobile */
+    margin: 0; /* Remove margin around items on mobile */
+    padding: 0; /* Remove padding if any */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
+  .skills__item img {
+    width: 48px; /* Set image width to fit container */
+    height: 48px; /* Set image height to fit container */
+    margin-bottom: 0; /* Ensure no extra space below the image */
+  }
 
-
-
-
-
-
-
-
-
-
-
+  .skills__item h4 {
+    display: none; /* Hide h4 on mobile devices */
+  }
+}
