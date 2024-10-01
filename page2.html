@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Alex Yusnyu - Certifications">
-    
+    <meta name="author" content="Alex Yusnyu">
+    <meta name="keywords" content="Alex Yusnyu, Certifications, Diplomas, Skills, Portfolio">
+    <meta property="og:title" content="Alex Yusnyu - Certifications">
+    <meta property="og:description" content="Explore the certifications and diplomas of Alex Yusnyu">
+    <meta property="og:image" content="path/to/og-image.jpg">
+    <meta property="og:url" content="https://www.alexyusnyu.com/certifications">
+    <meta name="twitter:card" content="summary_large_image">
+
     <!--==================== UNICONS ====================-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     
@@ -13,12 +20,12 @@
     
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="./packages/css/styles.css">
+    <link rel="stylesheet" href="./packages/css/custom.css"> <!-- Custom CSS for images -->
 
     <title>Alex Yusnyu - Certifications</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js"></script>
-       
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js" defer></script>
 </head>
 <body>
     <!--==================== HEADER ====================-->
@@ -29,58 +36,58 @@
                 <ul class="nav__list grid">
                     <li class="nav__item">
                         <a href="index.html#home" class="nav__link">
-                            <i class="uil uil-estate nav__icon"></i>Home
+                            <i class="uil uil-estate nav__icon" aria-hidden="true"></i>Home
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="index.html#about" class="nav__link">
-                            <i class="uil uil-user nav__icon"></i>About
+                            <i class="uil uil-user nav__icon" aria-hidden="true"></i>About
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="index.html#skills" class="nav__link">
-                            <i class="uil uil-file-alt nav__icon"></i>Skills
+                            <i class="uil uil-file-alt nav__icon" aria-hidden="true"></i>Skills
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="index.html#portfolio" class="nav__link">
-                            <i class="uil uil-scenery nav__icon"></i>Portfolio
+                            <i class="uil uil-scenery nav__icon" aria-hidden="true"></i>Portfolio
                         </a>
                     </li>
                     <li class="nav__item">
                         <a href="index.html#contact" class="nav__link">
-                            <i class="uil uil-message nav__icon"></i>Contact
+                            <i class="uil uil-message nav__icon" aria-hidden="true"></i>Contact
                         </a>
                     </li>
                 </ul>
-                <i class="uil uil-times nav__close" id="nav-close"></i>
+                <button class="nav__close" id="nav-close" aria-label="Close menu">
+                    <i class="uil uil-times" aria-hidden="true"></i>
+                </button>
             </div>
             <div class="nav__btns">
                 <!-- Theme change button -->
-                <i class="uil uil-moon change-theme" id="theme-button"></i>
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-apps"></i>
-                </div>
+                <button class="change-theme" id="theme-button" aria-label="Change theme">
+                    <i class="uil uil-moon" aria-hidden="true"></i>
+                </button>
+                <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+                    <i class="uil uil-apps" aria-hidden="true"></i>
+                </button>
             </div>
         </nav>
     </header>
 
     <!--==================== MAIN ====================-->
     <main class="main">
-
-    <!--==================== DIPLOMAS ====================-->
-    <section class="diplomas section" id="diplomas">
-        <h2 class="section__title">Diplomas</h2>
-        <span class="section__subtitle">My Diplomas</span>
-        <div class="diplomas__container container grid">
-            <div class="diploma__content">
-                <h3 class="diploma__title">Diploma PDF</h3>
+        <!--==================== DIPLOMAS ====================-->
+        <section class="diplomas section" id="diplomas">
+            <h2 class="section__title">Diplomas</h2>
+            <span class="section__subtitle">My Diplomas</span>
+            <div class="diplomas__container container grid">
+                <div class="diploma__content">
+                    <img src="packages/images/d01.jpeg" alt="Diploma" class="diploma__img">
+                </div>
             </div>
-            <!-- Container to hold the rendered PDF pages -->
-            <div id="pdf-render-container" class="diploma__content"></div>
-        </div>
-    </section>
-    <script src="packages/js/pdf.js"></script>
+        </section>
 
         <!--==================== CERTIFICATES ====================-->
         <section class="certificates section" id="certificates">
@@ -88,16 +95,40 @@
             <span class="section__subtitle">My Certificates</span>
             <div class="certificates__container container grid">
                 <div class="certificate__content">
-                    <img src="packages/images/certificate1.jpg" alt="Certificate 1" class="certificate__img">
-                    <h3 class="certificate__title">Certificate Title 1</h3>
+                    <img src="packages/images/c01.jpeg" alt="Certificate 1" class="certificate__img">
                 </div>
                 <div class="certificate__content">
-                    <img src="packages/images/certificate2.jpg" alt="Certificate 2" class="certificate__img">
-                    <h3 class="certificate__title">Certificate Title 2</h3>
+                    <img src="packages/images/c02.jpeg" alt="Certificate 2" class="certificate__img">
                 </div>
                 <div class="certificate__content">
-                    <img src="packages/images/certificate3.jpg" alt="Certificate 3" class="certificate__img">
-                    <h3 class="certificate__title">Certificate Title 3</h3>
+                    <img src="packages/images/c03.jpeg" alt="Certificate 3" class="certificate__img">
+                </div>
+                <div class="certificate__content">
+                    <img src="packages/images/c04.jpeg" alt="Certificate 4" class="certificate__img">
+                </div>
+                <div class="certificate__content">
+                    <img src="packages/images/c05.jpeg" alt="Certificate 5" class="certificate__img">
+                </div>
+                <div class="certificate__content">
+                    <img src="packages/images/c06.jpeg" alt="Certificate 6" class="certificate__img">
+                </div>
+                <div class="certificate__content">
+                    <img src="packages/images/c07.jpeg" alt="Certificate 7" class="certificate__img">
+                </div>
+                <div class="certificate__content">
+                    <img src="packages/images/c08.jpeg" alt="Certificate 8" class="certificate__img">
+                </div>
+                <div class="certificate__content">
+                    <img src="packages/images/c09.jpeg" alt="Certificate 9" class="certificate__img">
+                </div>
+                <div class="certificate__content">
+                    <img src="packages/images/c10.jpeg" alt="Certificate 10" class="certificate__img">
+                </div>
+                <div class="certificate__content">
+                    <img src="packages/images/c11.jpeg" alt="Certificate 11" class="certificate__img">
+                </div>
+                <div class="certificate__content">
+                    <img src="packages/images/c12.jpeg" alt="Certificate 12" class="certificate__img">
                 </div>
             </div>
         </section>
@@ -106,18 +137,16 @@
         <section class="home__button section">
             <div class="home__button-container container">
                 <a href="index.html" class="button button--flex home__button">
-                    Back to Home<i class="uil uil-arrow-left button__icon"></i>
+                    Back to Home<i class="uil uil-arrow-left button__icon" aria-hidden="true"></i>
                 </a>
             </div>
         </section>
     </main>
 
-    
-
     <!--==================== SWIPER JS ====================-->
-    <script src="./packages/js/swiper-bundle.min.js"></script>
+    <script src="./packages/js/swiper-bundle.min.js" defer></script>
 
     <!--==================== MAIN JS ====================-->
-    <script src="./packages/js/main.js"></script>
+    <script src="./packages/js/main.js" defer></script>
 </body>
 </html>

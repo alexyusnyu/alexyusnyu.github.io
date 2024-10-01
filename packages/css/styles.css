@@ -1191,3 +1191,33 @@ img {
   border: 1px solid #ccc;
   width: 100%;
 }
+
+
+
+
+
+/* Image styles */
+.diploma__img,
+.certificate__img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px; /* Optional: Add some border radius for better aesthetics */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for better aesthetics */
+}
+
+/* Ensure images scale nicely on mobile devices */
+@media (max-width: 768px) {
+  .diploma__img,
+  .certificate__img {
+      max-width: 90%;
+  }
+}
+
+/* Ensure images scale nicely on smaller mobile devices */
+@media (max-width: 480px) {
+  .diploma__img,
+  .certificate__img {
+      max-width: 100%;
+  }
+}
