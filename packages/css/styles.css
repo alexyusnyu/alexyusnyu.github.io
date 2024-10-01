@@ -1255,3 +1255,9 @@ img {
     }
 }
 
+
+@media (max-width: 768px) {
+  .diplomas {
+    padding: 0;
+  }
+}
