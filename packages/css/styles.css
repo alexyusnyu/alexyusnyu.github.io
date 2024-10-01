@@ -1195,29 +1195,63 @@ img {
 
 
 
+/* Full width for Diploma and Certificate Container styles */
+.diplomas__container,
+.certificates__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px; /* Adjust gap between images */
+    width: 100%; /* Make the container full width */
+    padding: 0 16px; /* Add some padding to the container */
+    box-sizing: border-box; /* Include padding in the element's total width */
+    
+}
 
+/* Ensure the sections take full width */
+.diplomas,
+.certificates {
+    width: 100%; /* Ensure sections are full width */
+    padding: 0; /* Reset any default padding */
+    
+}
+.diplomas {
+    padding: 60px;
+
+}
 /* Image styles */
 .diploma__img,
 .certificate__img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px; /* Optional: Add some border radius for better aesthetics */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for better aesthetics */
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Optional: Add some border radius for better aesthetics */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for better aesthetics */
+}
+
+/* Restricting the image size */
+.diploma__content,
+.certificate__content {
+    flex: 1 1 300px; /* Make the flex items take up equal space, with a minimum width of 300px */
+    max-width: 300px; /* Set a max-width to ensure images aren't too big */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 /* Ensure images scale nicely on mobile devices */
 @media (max-width: 768px) {
-  .diploma__img,
-  .certificate__img {
-      max-width: 90%;
-  }
+    .diploma__content,
+    .certificate__content {
+        flex: 1 1 200px; /* Reduce the minimum width on smaller screens */
+        max-width: 200px; /* Reduce max-width on smaller screens */
+    }
 }
 
 /* Ensure images scale nicely on smaller mobile devices */
 @media (max-width: 480px) {
-  .diploma__img,
-  .certificate__img {
-      max-width: 100%;
-  }
+    .diploma__content,
+    .certificate__content {
+        flex: 1 1 100%; /* Full width on very small screens */
+        max-width: 100%; /* Full width on very small screens */
+    }
 }
+
